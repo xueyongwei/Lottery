@@ -10,10 +10,28 @@ import UIKit
 
 class LotteryHallViewController: UIViewController {
 
+    lazy var childrenVC: HallCollectionViewController = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize.init(width: 100, height: 100)
+        layout.scrollDirection = .vertical
+        let vc =  HallCollectionViewController.init(collectionViewLayout: layout)
+        vc.collectionView.alwaysBounceVertical = true
+        return vc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "Hall"
+        
+//        self.addChild(childrenVC)
+//        childrenVC.didMove(toParent: self)
+//        self.view.addSubview(childrenVC.view)
+//        childrenVC.view.translatesAutoresizingMaskIntoConstraints = false
+//        childrenVC.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        childrenVC.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+//        childrenVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        childrenVC.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+//        
     }
     
 
