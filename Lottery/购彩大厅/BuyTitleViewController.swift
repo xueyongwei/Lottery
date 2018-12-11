@@ -10,6 +10,7 @@ import UIKit
 
 class BuyTitleViewController: UIViewController {
 
+    @IBOutlet weak var clickBtn: UIButton!
     
     
     override func viewDidLoad() {

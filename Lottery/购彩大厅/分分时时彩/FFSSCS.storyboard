@@ -12,7 +12,7 @@
         <!--Fssc View Controller-->
         <scene sceneID="7en-Do-Fvz">
             <objects>
-                <viewController storyboardIdentifier="FFsscViewController" id="Fta-Wd-RTs" customClass="FFsscViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FFsscViewController" hidesBottomBarWhenPushed="YES" id="Fta-Wd-RTs" customClass="FFsscViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="REd-mn-BnX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

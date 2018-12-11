@@ -17,12 +17,15 @@
 		0DD30C7621BEAE5B008AECFA /* BuyTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7521BEAE5B008AECFA /* BuyTitleViewController.swift */; };
 		0DD30C7821BEAFFF008AECFA /* BottomPayBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7721BEAFFF008AECFA /* BottomPayBoardViewController.swift */; };
 		0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7A21BEC29F008AECFA /* BettingTitleViwable.swift */; };
+		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
+		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
 		47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350121BE376B00B4B6F8 /* AppDelegate.swift */; };
 		47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350321BE376B00B4B6F8 /* ViewController.swift */; };
 		47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8350521BE376B00B4B6F8 /* Main.storyboard */; };
 		47E8350921BE376D00B4B6F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E8350821BE376D00B4B6F8 /* Assets.xcassets */; };
 		47E8350C21BE376D00B4B6F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8350A21BE376D00B4B6F8 /* LaunchScreen.storyboard */; };
 		47E8351721BE7B1900B4B6F8 /* LotteryHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8351621BE7B1900B4B6F8 /* LotteryHallViewController.swift */; };
+		A74CA875367799C6033D3979 /* Pods_Lottery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D9DB250CFD34CC8657EE97 /* Pods_Lottery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		0DD30C7521BEAE5B008AECFA /* BuyTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTitleViewController.swift; sourceTree = "<group>"; };
 		0DD30C7721BEAFFF008AECFA /* BottomPayBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPayBoardViewController.swift; sourceTree = "<group>"; };
 		0DD30C7A21BEC29F008AECFA /* BettingTitleViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingTitleViwable.swift; sourceTree = "<group>"; };
+		42F54C8937D24DFA3187D5B2 /* Pods-Lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.debug.xcconfig"; path = "Target Support Files/Pods-Lottery/Pods-Lottery.debug.xcconfig"; sourceTree = "<group>"; };
+		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
+		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
 		47E834FE21BE376B00B4B6F8 /* Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8350121BE376B00B4B6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E8350321BE376B00B4B6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		47E8350B21BE376D00B4B6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E8350D21BE376D00B4B6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E8351621BE7B1900B4B6F8 /* LotteryHallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryHallViewController.swift; sourceTree = "<group>"; };
+		83F5CB8444EC3BA24BB07C0F /* Pods-Lottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.release.xcconfig"; path = "Target Support Files/Pods-Lottery/Pods-Lottery.release.xcconfig"; sourceTree = "<group>"; };
+		C5D9DB250CFD34CC8657EE97 /* Pods_Lottery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lottery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74CA875367799C6033D3979 /* Pods_Lottery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +105,27 @@
 			isa = PBXGroup;
 			children = (
 				0DD30C7A21BEC29F008AECFA /* BettingTitleViwable.swift */,
+				47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */,
+				47844B9221BFBBB700F4D420 /* backViewTapable.swift */,
 			);
 			path = BaseProtocol;
+			sourceTree = "<group>";
+		};
+		1675C97C53CBFE554634BAF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42F54C8937D24DFA3187D5B2 /* Pods-Lottery.debug.xcconfig */,
+				83F5CB8444EC3BA24BB07C0F /* Pods-Lottery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1BECFC1CC9288976373249FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5D9DB250CFD34CC8657EE97 /* Pods_Lottery.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		47E834F521BE376B00B4B6F8 = {
@@ -105,6 +133,8 @@
 			children = (
 				47E8350021BE376B00B4B6F8 /* Lottery */,
 				47E834FF21BE376B00B4B6F8 /* Products */,
+				1675C97C53CBFE554634BAF4 /* Pods */,
+				1BECFC1CC9288976373249FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47E8351021BE376D00B4B6F8 /* Build configuration list for PBXNativeTarget "Lottery" */;
 			buildPhases = (
+				7EBB1B3E767745F48BC9A98B /* [CP] Check Pods Manifest.lock */,
 				47E834FA21BE376B00B4B6F8 /* Sources */,
 				47E834FB21BE376B00B4B6F8 /* Frameworks */,
 				47E834FC21BE376B00B4B6F8 /* Resources */,
+				8AC0863D5999EE974FFC4C26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,15 +248,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7EBB1B3E767745F48BC9A98B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lottery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AC0863D5999EE974FFC4C26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lottery/Pods-Lottery-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lottery/Pods-Lottery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		47E834FA21BE376B00B4B6F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */,
 				47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */,
 				0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */,
 				0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */,
 				0DD30C6E21BEA82D008AECFA /* FFsscViewController.swift in Sources */,
+				47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */,
 				0DD30C6921BEA4A5008AECFA /* CalculateTool.swift in Sources */,
 				0DD30C7621BEAE5B008AECFA /* BuyTitleViewController.swift in Sources */,
 				0DD30C6721BE9EEC008AECFA /* MathTool.swift in Sources */,
@@ -375,17 +466,22 @@
 		};
 		47E8351121BE376D00B4B6F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42F54C8937D24DFA3187D5B2 /* Pods-Lottery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42FQR4EVHR;
 				INFOPLIST_FILE = Lottery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Yuri.Lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = pub.xyw.Lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lottery/Lottery-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -395,17 +491,22 @@
 		};
 		47E8351221BE376D00B4B6F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F5CB8444EC3BA24BB07C0F /* Pods-Lottery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42FQR4EVHR;
 				INFOPLIST_FILE = Lottery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Yuri.Lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = pub.xyw.Lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lottery/Lottery-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

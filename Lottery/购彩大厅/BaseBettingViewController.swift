@@ -8,17 +8,6 @@
 
 import UIKit
 
-protocol BuyViewControllerProtocol:NSObjectProtocol {
-    func onMoreClick(sendr:UIButton)
-    func onTitleViewClick(sender:UIButton)
-}
-
-extension BuyViewControllerProtocol where Self:UIViewController{
-    func buyViewController() ->BaseBettingViewController{
-        let bvc = self.parent as! BaseBettingViewController
-        return bvc
-    }
-}
 
 class BaseBettingViewController: UIViewController {
 

@@ -8,7 +8,15 @@
 
 import UIKit
 
-class FFsscViewController: BaseBettingViewController {
+class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardViwable {
+    func onRightItemClick() {
+        print("点击了更多")
+    }
+    
+    func onTitleViewClick() {
+        print("点击了标题")
+    }
+    
 
     class func loadFormStb() ->FFsscViewController{
         let stb = UIStoryboard.init(name: "FFSSCS", bundle: nil)
@@ -18,12 +26,15 @@ class FFsscViewController: BaseBettingViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.customComonView()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-    func customTitleView(){
-        
+    func customComonView(){
+        self.setRightMoreItem()
+        self.setNaviTitleView()
+        self.addPayBoard()
     }
 
     /*
@@ -32,7 +43,7 @@ class FFsscViewController: BaseBettingViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+     // Pass the selected object to the new view c@objc ontroller.
     }
     */
 
