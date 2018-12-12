@@ -10,7 +10,7 @@ import Foundation
 
 protocol SSCCountCountable: NSObjectProtocol {
     
-    var playMethod:FFsscViewController.PlayMethod {get set}
+    var cai:SSCai {get set}
     
     var selectedIndex: [Int:[Int]] {get set}
     
@@ -45,16 +45,19 @@ extension SSCCountCountable{
     
     /// 押注完毕，进行计算
     func sscBetDoneAndCalculate(){
-        switch playMethod.type {
-        case .wuxing,.sixing,.sanxing,.erxing :
-            if playMethod.way == .fushi{
-                starMultiple(in: playMethod.type.starCount)
-                return
+        
+        switch cai.category {
+        case .wuxing,.sixing,.sanxing,.erxing:
+            switch cai.type {
+            case .wuxingzhixuan,.housizuxuan,.qiansizhixuan:
+                starMultiple(in: cai.category.starCount)
+            default:
+                break
             }
-            break
         default:
             break
         }
+      
     }
     
 }
