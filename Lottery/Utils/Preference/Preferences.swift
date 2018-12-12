@@ -59,7 +59,7 @@ enum XYWDebugLogType {
 ///   - line: 所在行
 func XYWDebugLog<T>(_ message:T, type:XYWDebugLogType = .verbose, file:String = #file, function:String = #function,
               line:Int = #line) {
-    #if XYWLOG
+    #if DEBUG
         //获取文件名
         let fileName = (file as NSString).lastPathComponent
         //打印日志内容
