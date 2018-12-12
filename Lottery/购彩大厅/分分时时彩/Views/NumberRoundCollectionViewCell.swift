@@ -11,11 +11,12 @@ import UIKit
 class NumberRoundCollectionViewCell: UICollectionViewCell {
     lazy var numberBtn: BgChangedButton = {
         let btn = BgChangedButton.init(type: .custom)
-        btn.backgroundColor = UIColor.white
+        btn.normalBgColor = UIColor.white
         btn.selectedBgColor = UIColor.red
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         btn.setTitleColor(UIColor.white, for: .selected)
         btn.setTitleColor(UIColor.black, for: .normal)
+        btn.isUserInteractionEnabled = false
         return btn
     }()
     
@@ -49,13 +50,23 @@ extension NumberRoundCollectionViewCell{
         
         var selectedBgColor:UIColor?
         
+        var normalBgColor:UIColor?{
+            didSet{
+                self.backgroundColor = normalBgColor
+            }
+        }
+        
         override var isSelected: Bool{
             didSet{
                 if selectedBgColor != nil{
-                    let normalBgColor = backgroundColor
                     self.backgroundColor = isSelected ? selectedBgColor : normalBgColor
                 }
             }
+        }
+        
+        override func layoutSubviews() {
+            super.layoutSubviews()
+            self.layer.cornerRadius = self.size.height * 0.5
         }
     }
 }

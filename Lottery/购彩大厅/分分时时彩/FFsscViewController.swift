@@ -54,7 +54,7 @@ class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardV
         content.view.snp.makeConstraints { (make) in
             make.top.right.bottom.left.equalToSuperview()
         }
-        content.collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: payBoardHeight)
+        content.collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: payBoardHeight, right: 0)
         
     }
     /*
