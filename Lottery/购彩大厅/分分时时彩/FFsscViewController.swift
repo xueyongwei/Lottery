@@ -10,6 +10,9 @@ import UIKit
 
 class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardViwable {
     
+    var payBoardVC: PayBoardViewController?
+    
+    
     var playMethod: PlayMethod = PlayMethod.init(type: .wuxing, way: .fushi)
     
     var payBoardHeight: CGFloat = 120
@@ -76,16 +79,15 @@ class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardV
 //MARK: - --------------CollectionSelectedChangedProtocol--------------
 extension FFsscViewController:CollectionSelectedChangedProtocol,SSCCountCountable{
     
-    
+    func betCountDidChanged(count: Int) {
+        self.payBoardVC?.msgLabel.text = "已选择\(count)注"
+    }
     
     func selectedChanged(in collectionView: UICollectionView) {
         
         let selectedIndexPaths = collectionView.indexPathsForSelectedItems
         
         self.updateSelectedIndex(with: selectedIndexPaths)
-        
-//        playMethod?.type.leixing.fangshi
-        
         
     }
 
@@ -142,6 +144,21 @@ extension FFsscViewController{
                 return "不定号"
             case .dingweidan:
                 return "定位胆"
+            }
+        }
+        /// 是几星的玩法（五星，四星等）
+        var starCount:Int{
+            switch self {
+            case .wuxing:
+                return 5
+            case .sixing:
+                return 4
+            case .sanxing:
+                return 3
+            case .erxing:
+                return 2
+            default:
+                return 0
             }
         }
     }

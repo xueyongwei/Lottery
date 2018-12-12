@@ -19,6 +19,8 @@ class PayBoardViewController: UIViewController,backViewTapable {
     
     @IBOutlet weak var inputTF: UITextField!
     
+    @IBOutlet weak var msgLabel: UILabel!
+    
     @IBOutlet weak var boardBottomLayout: NSLayoutConstraint!
     
     override func viewDidLoad() {

@@ -11,6 +11,7 @@ import SnapKit
 
 @objc protocol BettingPayBoardViwable: NSObjectProtocol {
     var payBoardHeight:CGFloat {get set}
+    var payBoardVC:PayBoardViewController?{set get}
 }
 extension BettingPayBoardViwable where Self:UIViewController {
     
@@ -26,6 +27,7 @@ extension BettingPayBoardViwable where Self:UIViewController {
             make.height.equalTo(payBoardHeight)
         }
         
+        self.payBoardVC = vc
     }
     
 }

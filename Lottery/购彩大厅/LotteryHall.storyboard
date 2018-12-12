@@ -228,6 +228,7 @@
                     <connections>
                         <outlet property="boardBottomLayout" destination="okq-Hw-Y40" id="08U-XZ-Kbn"/>
                         <outlet property="inputTF" destination="qq7-yP-zG6" id="Qzb-QK-dNi"/>
+                        <outlet property="msgLabel" destination="vLj-UH-H21" id="03s-qp-DjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xe1-Cd-eCo" userLabel="First Responder" sceneMemberID="firstResponder"/>

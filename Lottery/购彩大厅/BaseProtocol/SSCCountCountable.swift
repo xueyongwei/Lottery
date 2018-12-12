@@ -13,9 +13,11 @@ protocol SSCCountCountable: NSObjectProtocol {
     var playMethod:FFsscViewController.PlayMethod {get set}
     
     var selectedIndex: [Int:[Int]] {get set}
+    
+    func betCountDidChanged(count:Int)
 }
 
-/// 计算注数方式，核心算法
+
 extension SSCCountCountable{
     
     func updateSelectedIndex(with selectedIndexPahts:[IndexPath]?){
@@ -37,15 +39,17 @@ extension SSCCountCountable{
             XYWDebugLog("现有:\(selectedIndex.description)", type: .info)
         }
         
+        sscBetDoneAndCalculate()
+        
+    }
+    
+    /// 押注完毕，进行计算
+    func sscBetDoneAndCalculate(){
         switch playMethod.type {
-        case .wuxing:
-            switch playMethod.way{
-            case .fushi:
-                let count = calcute(in: 5)
-                print("注数：\(count)")
-                break
-            case .zuhe:
-                break
+        case .wuxing,.sixing,.sanxing,.erxing :
+            if playMethod.way == .fushi{
+                starMultiple(in: playMethod.type.starCount)
+                return
             }
             break
         default:
@@ -53,19 +57,21 @@ extension SSCCountCountable{
         }
     }
     
-    func calcute(in optionNumber:Int) -> Int{
+}
+
+//MARK: - --------------时时彩算法--------------
+extension SSCCountCountable {
+    /// N星中复式玩法的算法
+    func starMultiple(in nStar:Int){
         var count = 1
-        guard selectedIndex.count == optionNumber else {
-            return 0
+        guard selectedIndex.count == nStar else {
+            self.betCountDidChanged(count: 0)
+            return
         }
         for section in selectedIndex.keys{
             let numbers = selectedIndex[section]!
             count = numbers.count * count
         }
-//        for i in 1 ..< selectedIndex.count {
-//            let numbers = selectedIndex[i]!
-//            count = numbers.count * count
-//        }
-        return count
+        self.betCountDidChanged(count: count)
     }
 }
