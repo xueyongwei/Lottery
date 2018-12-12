@@ -24,6 +24,9 @@
 		47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */; };
 		47BB6E6D21C0E5E300E71BAE /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6C21C0E5E300E71BAE /* UIGradientView.swift */; };
 		47BB6E7021C0E65700E71BAE /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6F21C0E65700E71BAE /* Preferences.swift */; };
+		47BB6E7521C0F6B600E71BAE /* FfsscStarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E7421C0F6B600E71BAE /* FfsscStarCollectionViewController.swift */; };
+		47BB6E7821C0F75300E71BAE /* NumberRoundCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E7721C0F75300E71BAE /* NumberRoundCollectionViewCell.swift */; };
+		47BB6E7A21C1014400E71BAE /* QdxdsqCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E7921C1014400E71BAE /* QdxdsqCollectionHeader.swift */; };
 		47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350121BE376B00B4B6F8 /* AppDelegate.swift */; };
 		47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350321BE376B00B4B6F8 /* ViewController.swift */; };
 		47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8350521BE376B00B4B6F8 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		47BB6E6C21C0E5E300E71BAE /* UIGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
 		47BB6E6F21C0E65700E71BAE /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		47BB6E7121C0E71F00E71BAE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		47BB6E7421C0F6B600E71BAE /* FfsscStarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FfsscStarCollectionViewController.swift; sourceTree = "<group>"; };
+		47BB6E7721C0F75300E71BAE /* NumberRoundCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberRoundCollectionViewCell.swift; sourceTree = "<group>"; };
+		47BB6E7921C1014400E71BAE /* QdxdsqCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QdxdsqCollectionHeader.swift; sourceTree = "<group>"; };
 		47E834FE21BE376B00B4B6F8 /* Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8350121BE376B00B4B6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E8350321BE376B00B4B6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +113,10 @@
 		0DD30C6C21BEA7E4008AECFA /* 分分时时彩 */ = {
 			isa = PBXGroup;
 			children = (
+				47BB6E7621C0F6EA00E71BAE /* Views */,
 				0DD30C6F21BEA851008AECFA /* FFSSCS.storyboard */,
 				0DD30C6D21BEA82D008AECFA /* FFsscViewController.swift */,
+				47BB6E7421C0F6B600E71BAE /* FfsscStarCollectionViewController.swift */,
 			);
 			path = "分分时时彩";
 			sourceTree = "<group>";
@@ -190,6 +198,22 @@
 			path = Preference;
 			sourceTree = "<group>";
 		};
+		47BB6E7621C0F6EA00E71BAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47BB6E7721C0F75300E71BAE /* NumberRoundCollectionViewCell.swift */,
+				47BB6E7921C1014400E71BAE /* QdxdsqCollectionHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47BB6E7B21C1036B00E71BAE /* CommonVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonVC;
+			sourceTree = "<group>";
+		};
 		47E834F521BE376B00B4B6F8 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +254,7 @@
 		47E8351321BE382B00B4B6F8 /* 购彩大厅 */ = {
 			isa = PBXGroup;
 			children = (
+				47BB6E7B21C1036B00E71BAE /* CommonVC */,
 				0DD30C7921BEC262008AECFA /* BaseProtocol */,
 				0DD30C6C21BEA7E4008AECFA /* 分分时时彩 */,
 				47E8351621BE7B1900B4B6F8 /* LotteryHallViewController.swift */,
@@ -378,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */,
+				47BB6E7A21C1014400E71BAE /* QdxdsqCollectionHeader.swift in Sources */,
 				47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */,
 				0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */,
 				0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */,
@@ -393,7 +419,9 @@
 				47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */,
 				47E8351721BE7B1900B4B6F8 /* LotteryHallViewController.swift in Sources */,
 				47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */,
+				47BB6E7521C0F6B600E71BAE /* FfsscStarCollectionViewController.swift in Sources */,
 				0DD30C7821BEAFFF008AECFA /* PayBoardViewController.swift in Sources */,
+				47BB6E7821C0F75300E71BAE /* NumberRoundCollectionViewCell.swift in Sources */,
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

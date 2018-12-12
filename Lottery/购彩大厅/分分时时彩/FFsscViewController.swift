@@ -9,6 +9,9 @@
 import UIKit
 
 class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardViwable {
+    
+    var payBoardHeight: CGFloat = 120
+    
     func onRightItemClick() {
         print("点击了更多")
     }
@@ -26,17 +29,34 @@ class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.customComonView()
-
         
+        
+        self.customContentView()
+        
+        self.customComonView()
     }
-    
+    /// 定制通用视图控制器
     func customComonView(){
         self.setRightMoreItem()
         self.setNaviTitleView()
         self.addPayBoard()
     }
 
+    /// 定制内容控制器
+    func customContentView(){
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize.init(width: 50, height: 50)
+        let content = FfsscStarCollectionViewController.init(collectionViewLayout: layout)
+        self.addChild(content)
+        content.didMove(toParent: self)
+        self.view.addSubview(content.view)
+        content.view.snp.makeConstraints { (make) in
+            make.top.right.bottom.left.equalToSuperview()
+        }
+        content.collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: payBoardHeight)
+        
+    }
     /*
     // MARK: - Navigation
 

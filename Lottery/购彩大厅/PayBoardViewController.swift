@@ -15,6 +15,8 @@ class PayBoardViewController: UIViewController,backViewTapable {
         self.view.endEditing(true)
     }
     
+    var payBoardHeight:CGFloat = 120.0
+    
     @IBOutlet weak var inputTF: UITextField!
     
     @IBOutlet weak var boardBottomLayout: NSLayoutConstraint!
@@ -36,13 +38,18 @@ class PayBoardViewController: UIViewController,backViewTapable {
         guard let keyboardFrame = info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return
         }
+        
         let fullHeight = self.parent?.view.bounds.size.height ?? 400.0
+        let isShow = keyboardFrame.origin.y < fullHeight
+        
+        let tall = isShow ? fullHeight : payBoardHeight
         self.view.snp.updateConstraints { (make) in
-            make.height.equalTo(fullHeight)
+            make.height.equalTo(tall)
         }
+        self.view.superview?.layoutIfNeeded()
         
         let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0.3
-        let bottomCosnt =  keyboardFrame.origin.y < fullHeight ? -(keyboardFrame.size.height - self.view.safeAreaInsets.bottom): 0
+        let bottomCosnt =  isShow ? -(keyboardFrame.size.height - self.view.safeAreaInsets.bottom): 0
 
         self.boardBottomLayout.constant = bottomCosnt
         UIView.animate(withDuration: duration) {

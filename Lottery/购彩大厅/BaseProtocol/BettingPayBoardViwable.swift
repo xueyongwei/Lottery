@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 @objc protocol BettingPayBoardViwable: NSObjectProtocol {
-    
+    var payBoardHeight:CGFloat {get set}
 }
 extension BettingPayBoardViwable where Self:UIViewController {
     
@@ -20,10 +20,10 @@ extension BettingPayBoardViwable where Self:UIViewController {
         self.addChild(vc)
         vc.didMove(toParent: self)
         self.view.addSubview(vc.view)
-        
+        vc.payBoardHeight = payBoardHeight
         vc.view.snp.makeConstraints { (make) in
             make.bottom.left.right.equalToSuperview()
-            make.height.equalTo(120)
+            make.height.equalTo(payBoardHeight)
         }
         
     }
