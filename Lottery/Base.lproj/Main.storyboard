@@ -4,15 +4,16 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Root View Controller-->
         <scene sceneID="Qsr-Qu-aEl">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QUQ-t7-GDu" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QUQ-t7-GDu" customClass="RootViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Qp-3Z-2fw">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -21,6 +22,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Cc3-fO-ooR" kind="relationship" relationship="viewControllers" id="Eed-r9-RX2"/>
+                        <segue destination="sNv-aj-Tyh" kind="relationship" relationship="viewControllers" id="9E5-cA-VNF"/>
                         <segue destination="MbX-qI-JM1" kind="relationship" relationship="viewControllers" id="eER-NW-dB2"/>
                         <segue destination="id5-Hu-vlf" kind="relationship" relationship="viewControllers" id="Zzr-D0-lPe"/>
                     </connections>
@@ -29,11 +31,11 @@
             </objects>
             <point key="canvasLocation" x="-1462" y="222"/>
         </scene>
-        <!--Hall-->
+        <!--注单-->
         <scene sceneID="bbK-HI-Jyj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MbX-qI-JM1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hall" id="KzW-CH-RFg"/>
+                    <tabBarItem key="tabBarItem" title="注单" image="home_注单" selectedImage="home_注单点击" id="KzW-CH-RFg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yqh-45-hkG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -46,7 +48,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s85-lO-pGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1201" y="663"/>
         </scene>
         <!--LotteryHall-->
         <scene sceneID="e87-fO-gt0">
@@ -56,12 +58,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cV0-p5-xGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="14"/>
+            <point key="canvasLocation" x="2016" y="597"/>
         </scene>
-        <!--View Controller-->
+        <!--Mine View Controller-->
         <scene sceneID="bd6-jj-TqF">
             <objects>
-                <viewController id="xmP-cn-4Ut" customClass="ViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xmP-cn-4Ut" customClass="MineViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xek-SL-4Hy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,11 +76,11 @@
             </objects>
             <point key="canvasLocation" x="2020" y="1774"/>
         </scene>
-        <!--Item-->
+        <!--我的-->
         <scene sceneID="3Tk-Do-kjt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="id5-Hu-vlf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ekp-Rl-nyq"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="home_我的" selectedImage="home_我的点击" id="ekp-Rl-nyq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qxa-cD-TeE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -93,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1079" y="1774"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="3Dh-aX-b8y">
             <objects>
-                <viewController id="EzV-A7-1fs" customClass="ViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EzV-A7-1fs" customClass="HomeViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IF0-1Y-eDQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,11 +111,11 @@
             </objects>
             <point key="canvasLocation" x="2018" y="-861"/>
         </scene>
-        <!--Item-->
+        <!--首页-->
         <scene sceneID="afe-K3-d0P">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cc3-fO-ooR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YAC-s3-nlQ"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home_首页" selectedImage="home_首页点击" id="YAC-s3-nlQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0m3-ru-mFo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -128,5 +130,50 @@
             </objects>
             <point key="canvasLocation" x="1079" y="-861"/>
         </scene>
+        <!--开奖-->
+        <scene sceneID="nkR-88-ljL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sNv-aj-Tyh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="开奖" image="home_开奖" selectedImage="home_开奖点击" id="5SM-TF-rn2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mLT-w0-wQX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CFx-5H-W4D" kind="relationship" relationship="rootViewController" id="PMe-tM-BB2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcW-Ih-bGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="-97"/>
+        </scene>
+        <!--Come Lottery View Controller-->
+        <scene sceneID="CrR-4y-5fr">
+            <objects>
+                <viewController id="CFx-5H-W4D" customClass="ComeLotteryViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ap2-dg-yMh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TvG-SY-2R0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gWY-S5-qHG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDH-Ns-Q4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="-98"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="home_开奖" width="21" height="21"/>
+        <image name="home_开奖点击" width="21" height="21"/>
+        <image name="home_我的" width="21" height="21"/>
+        <image name="home_我的点击" width="21" height="21"/>
+        <image name="home_注单" width="21" height="21"/>
+        <image name="home_注单点击" width="21" height="21"/>
+        <image name="home_首页" width="21" height="21"/>
+        <image name="home_首页点击" width="21" height="21"/>
+    </resources>
 </document>
