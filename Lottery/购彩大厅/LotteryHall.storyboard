@@ -55,7 +55,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jAe-DK-QzU">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="jAe-DK-QzU">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="3201" y="-354"/>
         </scene>
-        <!--Bottom Pay Board View Controller-->
+        <!--Pay Board View Controller-->
         <scene sceneID="BYh-kK-PlZ">
             <objects>
-                <viewController storyboardIdentifier="BottomPayBoardViewController" id="cZw-XN-lqE" customClass="BottomPayBoardViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PayBoardViewController" id="cZw-XN-lqE" customClass="PayBoardViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8t-Hh-O8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

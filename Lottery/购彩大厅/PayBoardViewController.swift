@@ -1,5 +1,5 @@
 //
-//  BuyBottomPayBoardViewController.swift
+//  PayBoardViewController.swift
 //  Lottery
 //
 //  Created by 黄丹 on 2018/12/10.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class BottomPayBoardViewController: UIViewController,backViewTapable {
+class PayBoardViewController: UIViewController,backViewTapable {
     
     func backViewTaped(recognizer: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -42,7 +42,7 @@ class BottomPayBoardViewController: UIViewController,backViewTapable {
         }
         
         let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0.3
-        let bottomCosnt = -(fullHeight - keyboardFrame.size.height)
+        let bottomCosnt =  keyboardFrame.origin.y < fullHeight ? -(keyboardFrame.size.height - self.view.safeAreaInsets.bottom): 0
 
         self.boardBottomLayout.constant = bottomCosnt
         UIView.animate(withDuration: duration) {

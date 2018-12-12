@@ -16,6 +16,6 @@ target 'Lottery' do
     #图片加载
     pod 'SDWebImage', '~> 4.0'
     #网络请求
-    pod 'Alamofire', '~> 4.5'
+    pod 'CodableAlamofire'
     
 end

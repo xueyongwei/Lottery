@@ -16,7 +16,7 @@ extension BettingPayBoardViwable where Self:UIViewController {
     
     func addPayBoard() {
         let stb = UIStoryboard.init(name: "LotteryHall", bundle: nil)
-        let vc = stb.instantiateViewController(withIdentifier: "BottomPayBoardViewController") as! BottomPayBoardViewController
+        let vc = stb.instantiateViewController(withIdentifier: "PayBoardViewController") as! PayBoardViewController
         self.addChild(vc)
         vc.didMove(toParent: self)
         self.view.addSubview(vc.view)

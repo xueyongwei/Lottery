@@ -15,10 +15,15 @@
 		0DD30C7221BEA901008AECFA /* LotteryHall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD30C7121BEA901008AECFA /* LotteryHall.storyboard */; };
 		0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7321BEABAF008AECFA /* BaseBettingViewController.swift */; };
 		0DD30C7621BEAE5B008AECFA /* BuyTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7521BEAE5B008AECFA /* BuyTitleViewController.swift */; };
-		0DD30C7821BEAFFF008AECFA /* BottomPayBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7721BEAFFF008AECFA /* BottomPayBoardViewController.swift */; };
+		0DD30C7821BEAFFF008AECFA /* PayBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7721BEAFFF008AECFA /* PayBoardViewController.swift */; };
 		0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C7A21BEC29F008AECFA /* BettingTitleViwable.swift */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
+		47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */; };
+		47BB6E6721C0BD3400E71BAE /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6621C0BD3400E71BAE /* BaseNavigationController.swift */; };
+		47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */; };
+		47BB6E6D21C0E5E300E71BAE /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6C21C0E5E300E71BAE /* UIGradientView.swift */; };
+		47BB6E7021C0E65700E71BAE /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6F21C0E65700E71BAE /* Preferences.swift */; };
 		47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350121BE376B00B4B6F8 /* AppDelegate.swift */; };
 		47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350321BE376B00B4B6F8 /* ViewController.swift */; };
 		47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8350521BE376B00B4B6F8 /* Main.storyboard */; };
@@ -38,11 +43,17 @@
 		0DD30C7121BEA901008AECFA /* LotteryHall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LotteryHall.storyboard; sourceTree = "<group>"; };
 		0DD30C7321BEABAF008AECFA /* BaseBettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBettingViewController.swift; sourceTree = "<group>"; };
 		0DD30C7521BEAE5B008AECFA /* BuyTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTitleViewController.swift; sourceTree = "<group>"; };
-		0DD30C7721BEAFFF008AECFA /* BottomPayBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPayBoardViewController.swift; sourceTree = "<group>"; };
+		0DD30C7721BEAFFF008AECFA /* PayBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBoardViewController.swift; sourceTree = "<group>"; };
 		0DD30C7A21BEC29F008AECFA /* BettingTitleViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingTitleViwable.swift; sourceTree = "<group>"; };
 		42F54C8937D24DFA3187D5B2 /* Pods-Lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.debug.xcconfig"; path = "Target Support Files/Pods-Lottery/Pods-Lottery.debug.xcconfig"; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
 		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
+		47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenView.swift; sourceTree = "<group>"; };
+		47BB6E6621C0BD3400E71BAE /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		47BB6E6C21C0E5E300E71BAE /* UIGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
+		47BB6E6F21C0E65700E71BAE /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		47BB6E7121C0E71F00E71BAE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		47E834FE21BE376B00B4B6F8 /* Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8350121BE376B00B4B6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E8350321BE376B00B4B6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +81,7 @@
 		0DD30C5F21BE9E7F008AECFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				47BB6E6E21C0E64100E71BAE /* Preference */,
 				0DD30C6021BE9E91008AECFA /* Tools */,
 			);
 			path = Utils;
@@ -128,6 +140,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		47BB6E6121C0BCCF00E71BAE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				47BB6E6821C0E53300E71BAE /* Extension */,
+				47BB6E6321C0BCFE00E71BAE /* CommonViews */,
+				47BB6E6221C0BCE800E71BAE /* BaseClass */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		47BB6E6221C0BCE800E71BAE /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				47BB6E6621C0BD3400E71BAE /* BaseNavigationController.swift */,
+				47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		47BB6E6321C0BCFE00E71BAE /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				47BB6E6C21C0E5E300E71BAE /* UIGradientView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		47BB6E6821C0E53300E71BAE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		47BB6E6B21C0E5BC00E71BAE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		47BB6E6E21C0E64100E71BAE /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				47BB6E6F21C0E65700E71BAE /* Preferences.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		47E834F521BE376B00B4B6F8 = {
 			isa = PBXGroup;
 			children = (
@@ -149,12 +211,15 @@
 		47E8350021BE376B00B4B6F8 /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
+				47BB6E6B21C0E5BC00E71BAE /* Support */,
+				47BB6E6121C0BCCF00E71BAE /* Common */,
 				0DD30C5F21BE9E7F008AECFA /* Utils */,
 				47E8351321BE382B00B4B6F8 /* 购彩大厅 */,
 				47E8350121BE376B00B4B6F8 /* AppDelegate.swift */,
 				47E8350321BE376B00B4B6F8 /* ViewController.swift */,
 				47E8350521BE376B00B4B6F8 /* Main.storyboard */,
 				0DD30C6221BE9EB3008AECFA /* Lottery-Bridging-Header.h */,
+				47BB6E7121C0E71F00E71BAE /* PrefixHeader.pch */,
 				47E8350821BE376D00B4B6F8 /* Assets.xcassets */,
 				47E8350A21BE376D00B4B6F8 /* LaunchScreen.storyboard */,
 				47E8350D21BE376D00B4B6F8 /* Info.plist */,
@@ -171,7 +236,7 @@
 				0DD30C6A21BEA605008AECFA /* HallCollectionViewController.swift */,
 				0DD30C7321BEABAF008AECFA /* BaseBettingViewController.swift */,
 				0DD30C7521BEAE5B008AECFA /* BuyTitleViewController.swift */,
-				0DD30C7721BEAFFF008AECFA /* BottomPayBoardViewController.swift */,
+				0DD30C7721BEAFFF008AECFA /* PayBoardViewController.swift */,
 				0DD30C7121BEA901008AECFA /* LotteryHall.storyboard */,
 			);
 			path = "购彩大厅";
@@ -281,6 +346,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lottery/Pods-Lottery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -292,6 +358,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -318,10 +385,15 @@
 				47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */,
 				0DD30C6921BEA4A5008AECFA /* CalculateTool.swift in Sources */,
 				0DD30C7621BEAE5B008AECFA /* BuyTitleViewController.swift in Sources */,
+				47BB6E7021C0E65700E71BAE /* Preferences.swift in Sources */,
+				47BB6E6721C0BD3400E71BAE /* BaseNavigationController.swift in Sources */,
 				0DD30C6721BE9EEC008AECFA /* MathTool.swift in Sources */,
+				47BB6E6D21C0E5E300E71BAE /* UIGradientView.swift in Sources */,
+				47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */,
 				47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */,
 				47E8351721BE7B1900B4B6F8 /* LotteryHallViewController.swift in Sources */,
-				0DD30C7821BEAFFF008AECFA /* BottomPayBoardViewController.swift in Sources */,
+				47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */,
+				0DD30C7821BEAFFF008AECFA /* PayBoardViewController.swift in Sources */,
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,17 +543,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42FQR4EVHR;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8A25PUJZK7;
 				INFOPLIST_FILE = Lottery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pub.xyw.Lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.115.browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = 114La_Push_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "Lottery/Lottery-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -495,18 +567,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42FQR4EVHR;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RF3D9852ET;
 				INFOPLIST_FILE = Lottery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pub.xyw.Lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.115.browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "115IH InHouse: *";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lottery/Lottery-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

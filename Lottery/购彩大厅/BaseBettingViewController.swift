@@ -25,9 +25,9 @@ class BaseBettingViewController: UIViewController {
         return vc
     }()
     
-    lazy var payBoardVC: BottomPayBoardViewController = {
+    lazy var payBoardVC: PayBoardViewController = {
         let stb = UIStoryboard.init(name: "LotteryHall", bundle: nil)
-        let vc = stb.instantiateViewController(withIdentifier: "BottomPayBoardViewController") as! BottomPayBoardViewController
+        let vc = stb.instantiateViewController(withIdentifier: "PayBoardViewController") as! PayBoardViewController
         return vc
     }()
     
