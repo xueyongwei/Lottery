@@ -35,6 +35,11 @@
 		47BB6E7A21C1014400E71BAE /* QdxdsqCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E7921C1014400E71BAE /* QdxdsqCollectionHeader.swift */; };
 		47BB6E7D21C10C6900E71BAE /* CollectionSelectedChangedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E7C21C10C6900E71BAE /* CollectionSelectedChangedProtocol.swift */; };
 		47BB6E7F21C10F0100E71BAE /* SSCCountCountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E7E21C10F0100E71BAE /* SSCCountCountable.swift */; };
+		47C0192621C257F6003DA90A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C0192521C257F6003DA90A /* Home.storyboard */; };
+		47C0192C21C25C87003DA90A /* ViewCodeLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0192B21C25C87003DA90A /* ViewCodeLayoutable.swift */; };
+		47C0192E21C25D00003DA90A /* CodeLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0192D21C25D00003DA90A /* CodeLayoutView.swift */; };
+		47C0193021C25E06003DA90A /* CodeLayoutReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0192F21C25E06003DA90A /* CodeLayoutReusableView.swift */; };
+		47C0193221C25E1C003DA90A /* CodeLayoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0193121C25E1C003DA90A /* CodeLayoutCollectionViewCell.swift */; };
 		47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350121BE376B00B4B6F8 /* AppDelegate.swift */; };
 		47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8350321BE376B00B4B6F8 /* ViewController.swift */; };
 		47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8350521BE376B00B4B6F8 /* Main.storyboard */; };
@@ -76,6 +81,11 @@
 		47BB6E7921C1014400E71BAE /* QdxdsqCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QdxdsqCollectionHeader.swift; sourceTree = "<group>"; };
 		47BB6E7C21C10C6900E71BAE /* CollectionSelectedChangedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSelectedChangedProtocol.swift; sourceTree = "<group>"; };
 		47BB6E7E21C10F0100E71BAE /* SSCCountCountable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCCountCountable.swift; sourceTree = "<group>"; };
+		47C0192521C257F6003DA90A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		47C0192B21C25C87003DA90A /* ViewCodeLayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeLayoutable.swift; sourceTree = "<group>"; };
+		47C0192D21C25D00003DA90A /* CodeLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLayoutView.swift; sourceTree = "<group>"; };
+		47C0192F21C25E06003DA90A /* CodeLayoutReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLayoutReusableView.swift; sourceTree = "<group>"; };
+		47C0193121C25E1C003DA90A /* CodeLayoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLayoutCollectionViewCell.swift; sourceTree = "<group>"; };
 		47E834FE21BE376B00B4B6F8 /* Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E8350121BE376B00B4B6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E8350321BE376B00B4B6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +175,7 @@
 			children = (
 				0DD30C8121C15260008AECFA /* HomeViewController.swift */,
 				0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */,
+				47C0192521C257F6003DA90A /* Home.storyboard */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 		47BB6E6121C0BCCF00E71BAE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				47C0192A21C25C76003DA90A /* BaseProtocol */,
 				47BB6E6821C0E53300E71BAE /* Extension */,
 				47BB6E6321C0BCFE00E71BAE /* CommonViews */,
 				47BB6E6221C0BCE800E71BAE /* BaseClass */,
@@ -225,6 +237,9 @@
 			children = (
 				47BB6E6621C0BD3400E71BAE /* BaseNavigationController.swift */,
 				47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */,
+				47C0192D21C25D00003DA90A /* CodeLayoutView.swift */,
+				47C0192F21C25E06003DA90A /* CodeLayoutReusableView.swift */,
+				47C0193121C25E1C003DA90A /* CodeLayoutCollectionViewCell.swift */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -277,6 +292,14 @@
 				0DD30C7721BEAFFF008AECFA /* PayBoardViewController.swift */,
 			);
 			path = CommonVC;
+			sourceTree = "<group>";
+		};
+		47C0192A21C25C76003DA90A /* BaseProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				47C0192B21C25C87003DA90A /* ViewCodeLayoutable.swift */,
+			);
+			path = BaseProtocol;
 			sourceTree = "<group>";
 		};
 		47E834F521BE376B00B4B6F8 = {
@@ -395,6 +418,7 @@
 				47E8350C21BE376D00B4B6F8 /* LaunchScreen.storyboard in Resources */,
 				0DD30C7221BEA901008AECFA /* LotteryHall.storyboard in Resources */,
 				47E8350921BE376D00B4B6F8 /* Assets.xcassets in Resources */,
+				47C0192621C257F6003DA90A /* Home.storyboard in Resources */,
 				47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */,
 				0DD30C7021BEA851008AECFA /* FFSSCS.storyboard in Resources */,
 			);
@@ -438,6 +462,7 @@
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
@@ -450,6 +475,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
@@ -469,6 +495,7 @@
 				0DD30C8221C15260008AECFA /* HomeViewController.swift in Sources */,
 				0DD30C8A21C1541C008AECFA /* HomeFeedCollectionViewController.swift in Sources */,
 				0DD30C8621C152F6008AECFA /* MineViewController.swift in Sources */,
+				47C0192E21C25D00003DA90A /* CodeLayoutView.swift in Sources */,
 				47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */,
 				47BB6E7A21C1014400E71BAE /* QdxdsqCollectionHeader.swift in Sources */,
 				0DD30C8821C15358008AECFA /* ComeLotteryViewController.swift in Sources */,
@@ -486,6 +513,7 @@
 				0DD30C8D21C1590F008AECFA /* SSCai.swift in Sources */,
 				47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */,
 				0DD30C7D21C150FA008AECFA /* RootViewController.swift in Sources */,
+				47C0193221C25E1C003DA90A /* CodeLayoutCollectionViewCell.swift in Sources */,
 				47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */,
 				47E8351721BE7B1900B4B6F8 /* LotteryHallViewController.swift in Sources */,
 				47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */,
@@ -495,6 +523,8 @@
 				0DD30C7821BEAFFF008AECFA /* PayBoardViewController.swift in Sources */,
 				47BB6E7821C0F75300E71BAE /* NumberRoundCollectionViewCell.swift in Sources */,
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
+				47C0193021C25E06003DA90A /* CodeLayoutReusableView.swift in Sources */,
+				47C0192C21C25C87003DA90A /* ViewCodeLayoutable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
