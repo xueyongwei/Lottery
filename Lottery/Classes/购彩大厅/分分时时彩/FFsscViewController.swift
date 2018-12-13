@@ -19,10 +19,14 @@ class FFsscViewController:UIViewController,BettingTitleViwable ,BettingPayBoardV
     
     func onRightItemClick() {
         print("点击了更多")
+        
     }
     
     func onTitleViewClick() {
         print("点击了标题")
+        ChoseBetWayViewController.presentFrom(VC: self, lotteryCategory: .ssc) { (result) in
+            XYWDebugLog("result = \(result)", type: .warning)
+        }
     }
     
     var selectedIndex = [Int:[Int]]()

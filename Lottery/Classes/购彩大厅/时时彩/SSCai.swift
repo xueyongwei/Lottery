@@ -23,7 +23,9 @@ class SSCai {
         self.way = way
         self.type = type
     }
-    
+    var allCategeory:[BetCategory]{
+        return []
+    }
 }
 
 

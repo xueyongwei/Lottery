@@ -55,7 +55,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="jAe-DK-QzU">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jAe-DK-QzU">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -75,16 +75,71 @@
             </objects>
             <point key="canvasLocation" x="1791" y="96"/>
         </scene>
-        <!--Base Betting View Controller-->
+        <!--Chose Bet Way View Controller-->
         <scene sceneID="1Vd-Hm-8TA">
             <objects>
-                <viewController storyboardIdentifier="BuyViewController" hidesBottomBarWhenPushed="YES" id="IJc-2H-2PQ" customClass="BaseBettingViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChoseBetWayViewController" hidesBottomBarWhenPushed="YES" id="IJc-2H-2PQ" customClass="ChoseBetWayViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILF-9a-Md3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="87k-6e-IUG">
+                                <rect key="frame" x="0.0" y="212" width="375" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8h5-iv-RNQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d4u-5W-w3B">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMj-xY-4gL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngk-x3-8Ha">
+                                        <rect key="frame" x="114" y="33" width="46" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="L4M-xb-F3Z"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ngk-x3-8Ha" firstAttribute="leading" secondItem="iMj-xY-4gL" secondAttribute="leading" constant="114" id="07k-GK-raJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ngk-x3-8Ha" secondAttribute="bottom" constant="65" id="DAf-bJ-TaD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ngk-x3-8Ha" secondAttribute="trailing" constant="215" id="imB-qd-83z"/>
+                                    <constraint firstItem="Ngk-x3-8Ha" firstAttribute="top" secondItem="iMj-xY-4gL" secondAttribute="top" constant="33" id="lfK-KD-ReK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iMj-xY-4gL" firstAttribute="top" secondItem="HvH-GC-dwQ" secondAttribute="top" id="AGm-UQ-cvn"/>
+                            <constraint firstItem="87k-6e-IUG" firstAttribute="leading" secondItem="HvH-GC-dwQ" secondAttribute="leading" id="Dp8-U3-xse"/>
+                            <constraint firstItem="HvH-GC-dwQ" firstAttribute="trailing" secondItem="iMj-xY-4gL" secondAttribute="trailing" id="J1o-cL-boL"/>
+                            <constraint firstItem="HvH-GC-dwQ" firstAttribute="bottom" secondItem="87k-6e-IUG" secondAttribute="bottom" id="YZn-m1-1dH"/>
+                            <constraint firstItem="87k-6e-IUG" firstAttribute="top" secondItem="iMj-xY-4gL" secondAttribute="bottom" id="ivg-xB-2vf"/>
+                            <constraint firstItem="iMj-xY-4gL" firstAttribute="leading" secondItem="HvH-GC-dwQ" secondAttribute="leading" id="nJ7-0x-ORP"/>
+                            <constraint firstItem="HvH-GC-dwQ" firstAttribute="trailing" secondItem="87k-6e-IUG" secondAttribute="trailing" id="xVF-tG-m8E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HvH-GC-dwQ"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="87k-6e-IUG" id="4Xz-t4-pwP"/>
+                        <outlet property="topContentView" destination="iMj-xY-4gL" id="jef-vi-Wh8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="an3-yO-Se7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

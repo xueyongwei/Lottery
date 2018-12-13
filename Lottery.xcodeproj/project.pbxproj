@@ -23,6 +23,7 @@
 		0DD30C8821C15358008AECFA /* ComeLotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8721C15358008AECFA /* ComeLotteryViewController.swift */; };
 		0DD30C8A21C1541C008AECFA /* HomeFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */; };
 		0DD30C8D21C1590F008AECFA /* SSCai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8C21C1590F008AECFA /* SSCai.swift */; };
+		0DD30C8F21C2982C008AECFA /* ChoseBetWayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8E21C2982C008AECFA /* ChoseBetWayViewController.swift */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
 		47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */; };
@@ -67,6 +68,7 @@
 		0DD30C8721C15358008AECFA /* ComeLotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeLotteryViewController.swift; sourceTree = "<group>"; };
 		0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		0DD30C8C21C1590F008AECFA /* SSCai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCai.swift; sourceTree = "<group>"; };
+		0DD30C8E21C2982C008AECFA /* ChoseBetWayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseBetWayViewController.swift; sourceTree = "<group>"; };
 		42F54C8937D24DFA3187D5B2 /* Pods-Lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.debug.xcconfig"; path = "Target Support Files/Pods-Lottery/Pods-Lottery.debug.xcconfig"; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
 		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				0DD30C6C21BEA7E4008AECFA /* 分分时时彩 */,
 				47E8351621BE7B1900B4B6F8 /* LotteryHallViewController.swift */,
 				0DD30C6A21BEA605008AECFA /* HallCollectionViewController.swift */,
+				0DD30C8E21C2982C008AECFA /* ChoseBetWayViewController.swift */,
 				0DD30C7121BEA901008AECFA /* LotteryHall.storyboard */,
 			);
 			path = "购彩大厅";
@@ -521,6 +524,7 @@
 				47BB6E7521C0F6B600E71BAE /* FfsscStarCollectionViewController.swift in Sources */,
 				47BB6E7F21C10F0100E71BAE /* SSCCountCountable.swift in Sources */,
 				0DD30C7821BEAFFF008AECFA /* PayBoardViewController.swift in Sources */,
+				0DD30C8F21C2982C008AECFA /* ChoseBetWayViewController.swift in Sources */,
 				47BB6E7821C0F75300E71BAE /* NumberRoundCollectionViewCell.swift in Sources */,
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
 				47C0193021C25E06003DA90A /* CodeLayoutReusableView.swift in Sources */,
