@@ -1,0 +1,39 @@
+{
+    "name":"五星",
+    "cid":1000,
+    "children":[
+        {
+            "name":"五星直选",
+            "cid":1100,
+            "children":[
+                {
+                    "name":"复式",
+                    "cid":1110,
+                    "children":[]
+                },
+                {
+                    "name":"单式",
+                    "cid":1111,
+                    "children":[]
+                }
+            ],
+        },
+        {
+            "name":"五星组选",
+            "cid":1200,
+            "children":[
+                {
+                    "name":"复式",
+                    "cid":1220,
+                    "children":[]
+                },
+                {
+                    "name":"单式",
+                    "cid":1221,
+                    "children":[]
+                },
+            ],
+        },
+    ],
+    
+}

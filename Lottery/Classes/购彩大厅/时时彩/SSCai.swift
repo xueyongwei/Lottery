@@ -23,8 +23,9 @@ class SSCai {
         self.way = way
         self.type = type
     }
+    
     var allCategeory:[BetCategory]{
-        return []
+        return [.wuxing,.sixing,.sanxing,.erxing,.douniu,.teshuhao,.daxiaodanshuang,.longhu,.quwei,.renxuan,.budingwei,.dingweidan]
     }
 }
 
@@ -95,7 +96,7 @@ extension SSCai{
     }
 }
 
-//MARK: - -----------BetType扩展方法------------
+//MARK: - -----------BetCategory扩展方法------------
 extension SSCai.BetCategory {
     var info:(name:String,betWays:[SSCai.BetType]){
         switch self {
@@ -143,7 +144,11 @@ extension SSCai.BetCategory {
     }
     
 }
-
+//MARK: - -----------BetType扩展方法------------
+extension SSCai.BetType{
+    
+    
+}
 //MARK: - -----------BetWay扩展方法------------
 extension SSCai.BetType{
     
