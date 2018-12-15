@@ -68,10 +68,8 @@ extension ChoseBetWayViewController{
         switch category {
         case .ssc:
             let cai = SSCai.init(category: .wuxing, type: .wuxingzhixuan, way: .fushi)
-            cai.category
-            cai.category.info.betWays.map { (way) -> T in
-                return wa
-            }
+            
+            
             break
         case .kuai3:
             break
