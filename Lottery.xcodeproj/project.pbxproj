@@ -24,6 +24,8 @@
 		0DD30C8A21C1541C008AECFA /* HomeFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */; };
 		0DD30C8D21C1590F008AECFA /* SSCai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8C21C1590F008AECFA /* SSCai.swift */; };
 		0DD30C8F21C2982C008AECFA /* ChoseBetWayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C8E21C2982C008AECFA /* ChoseBetWayViewController.swift */; };
+		0DD30C9221C4D288008AECFA /* APICenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C9121C4D288008AECFA /* APICenter.swift */; };
+		0DD30C9421C4D752008AECFA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C9321C4D752008AECFA /* Service.swift */; };
 		4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */ = {isa = PBXBuildFile; fileRef = 4781AC8721C3889F00E3DD54 /* SSCai.json */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
@@ -70,6 +72,8 @@
 		0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		0DD30C8C21C1590F008AECFA /* SSCai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCai.swift; sourceTree = "<group>"; };
 		0DD30C8E21C2982C008AECFA /* ChoseBetWayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseBetWayViewController.swift; sourceTree = "<group>"; };
+		0DD30C9121C4D288008AECFA /* APICenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenter.swift; sourceTree = "<group>"; };
+		0DD30C9321C4D752008AECFA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		42F54C8937D24DFA3187D5B2 /* Pods-Lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.debug.xcconfig"; path = "Target Support Files/Pods-Lottery/Pods-Lottery.debug.xcconfig"; sourceTree = "<group>"; };
 		4781AC8721C3889F00E3DD54 /* SSCai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SSCai.json; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		0DD30C5F21BE9E7F008AECFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0DD30C9021C4D288008AECFA /* APICenter */,
 				47BB6E6E21C0E64100E71BAE /* Preference */,
 				0DD30C6021BE9E91008AECFA /* Tools */,
 			);
@@ -207,6 +212,15 @@
 				0DD30C8C21C1590F008AECFA /* SSCai.swift */,
 			);
 			path = "时时彩";
+			sourceTree = "<group>";
+		};
+		0DD30C9021C4D288008AECFA /* APICenter */ = {
+			isa = PBXGroup;
+			children = (
+				0DD30C9121C4D288008AECFA /* APICenter.swift */,
+				0DD30C9321C4D752008AECFA /* Service.swift */,
+			);
+			path = APICenter;
 			sourceTree = "<group>";
 		};
 		1675C97C53CBFE554634BAF4 /* Pods */ = {
@@ -504,9 +518,11 @@
 				0DD30C8621C152F6008AECFA /* MineViewController.swift in Sources */,
 				47C0192E21C25D00003DA90A /* CodeLayoutView.swift in Sources */,
 				47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */,
+				0DD30C9421C4D752008AECFA /* Service.swift in Sources */,
 				47BB6E7A21C1014400E71BAE /* QdxdsqCollectionHeader.swift in Sources */,
 				0DD30C8821C15358008AECFA /* ComeLotteryViewController.swift in Sources */,
 				47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */,
+				0DD30C9221C4D288008AECFA /* APICenter.swift in Sources */,
 				0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */,
 				0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */,
 				0DD30C6E21BEA82D008AECFA /* FFsscViewController.swift in Sources */,

@@ -9,6 +9,8 @@
 import UIKit
 import YYKit
 import SDCycleScrollView
+import Alamofire
+import CodableAlamofire
 
 private let reuseIdentifier = "Cell"
 
@@ -85,7 +87,7 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
 
         self.dataSource = [.topBarner,.winInfo,.funcItem,.hotCategory,.centerBarner,.lotterys]
         
-        
+        requestData()
     }
 
 
@@ -152,7 +154,52 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
     
 
 }
-
+//MARK: - --------------请求数据--------------
+extension HomeFeedCollectionViewController{
+    /// 请求首页的数据
+    func requestData(){
+        
+        Service.Lottery.index(sucess: { (response) in
+            guard response.status == 1 else {
+                return
+            }
+            do {
+                if let data = response.data as? Array<Any>{
+                    for itm in data {
+                        let itmData = try JSONSerialization.data(withJSONObject: response.data)
+                        let model = try JSONDecoder().decode(HomeType.self, from: itmData)
+                        
+                        self.dataSource.append(model.itemType)
+                    }
+                }
+                
+                
+            }catch {
+                
+            }
+            let data = response.data
+        }) { (error) in
+            
+        }
+        
+//        Service.Lottery.index(sucess: { (response) in
+//            guard response.status == 1 else {
+//                return
+//            }
+//
+//            let data = try JSONSerialization.data(withJSONObject: nestedJson)
+//
+////            JSONDecoder().decode(HomeType, from: s)
+////            if let data = response.data as? Array<Dictionary<String,Any>{
+////                for itm in data{
+////
+////                }
+////            }
+//        }) { (error) in
+//            XYWDebugLog(error.localizedDescription, type: .error)
+//        }
+    }
+}
 //MARK: - --------------辅助方法--------------
 extension HomeFeedCollectionViewController{
     
@@ -209,22 +256,29 @@ extension HomeFeedCollectionViewController{
 //MARK: - --------------类中类--------------
 extension HomeFeedCollectionViewController{
     //MARK: ----模型
-    struct TopBarner {
+    struct HomeType: Decodable{
+        var itemType:Int
+        var itemDatas:[HomeItem]
+    }
+    class HomeItem:Decodable {
+        
+    }
+    class TopBarner:HomeItem {
         var name:String?
         var imgUrl:String?
         var clickUrl:String?
     }
-    struct FuncItem {
+    class FuncItem :HomeItem{
         var name:String?
         var imgUrl:String?
     }
     
-    struct Lottery {
-        var name:String
-        var imgUrl:String
-        var type:Int
-        var timeCycle:Int
-        var lossPerCent:Float
+    class Lottery :HomeItem{
+        var name:String?
+        var imgUrl:String?
+        var type:Int?
+        var timeCycle:Int?
+        var lossPerCent:Float?
     }
     //MARK: ----ReusableView
     class PlaceHolderHeader:CodeLayoutReusableView{
