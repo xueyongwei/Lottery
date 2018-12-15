@@ -17,7 +17,10 @@ target 'Lottery' do
     pod 'SDWebImage', '~> 4.0'
     #网络请求
     pod 'CodableAlamofire'
+    #数据解析
     pod 'SwiftyJSON'
     #轮播
     pod 'SDCycleScrollView'
+    #分类滑动
+    pod 'JXCategoryView'
 end

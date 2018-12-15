@@ -32,8 +32,10 @@ class HomeViewController: UIViewController {
     }
     func addMsgBtn(){
         view.addSubview(msgBtn)
+        
         msgBtn.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(8)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(8)
+//            make.top.equalToSuperview().offset(8+self.view.safeAreaInsets.top)
             make.right.equalToSuperview().offset(-15)
             make.height.equalTo(26)
             make.width.equalTo(26)
@@ -45,6 +47,7 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize.init(width: 80, height: 80)
+        layout.minimumInteritemSpacing = 3
         let vc = HomeFeedCollectionViewController.init(collectionViewLayout: layout)
         self.addChild(vc)
         vc.didMove(toParent: self)

@@ -9,17 +9,38 @@
 import UIKit
 
 class CodeLayoutReusableView: UICollectionReusableView ,ViewCodeLayoutable{
-    func codeCustomSubviews() {
-        XYWDebugLog("CodeLayoutView派生类应该遵循ViewCodeLayoutable协议", type: .error)
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         codeCustomSubviews()
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         codeCustomSubviews()
+    }
+    func codeCustomSubviews() {
+        XYWDebugLog("CodeLayoutView派生类应该遵循ViewCodeLayoutable协议", type: .error)
+    }
+    
+    
+    
+    
+}
+
+class CodeLayoutCollectionCell:UICollectionViewCell,ViewCodeLayoutable{
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        codeCustomSubviews()
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        codeCustomSubviews()
+    }
+    func codeCustomSubviews() {
+        XYWDebugLog("CodeLayoutView派生类应该遵循ViewCodeLayoutable协议", type: .error)
     }
 }

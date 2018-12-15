@@ -9,6 +9,7 @@
 import UIKit
 import CodableAlamofire
 import Alamofire
+import SwiftyJSON
 
 class Service: NSObject {
     typealias SucessBlock = (_ response:Response)->()
@@ -26,23 +27,23 @@ class Service: NSObject {
         }
     }
     
-    struct Response {
-        var data:Any
+    struct Response:Decodable {
+        var data:JSON
         var status:Int
         var message:String
         
-        /// 从JSON得到一个Response对象
-        static func with(alamJSON:Any) ->Response?{
-            if let dict = alamJSON as? Dictionary<String, Any>,
-                let data = dict["data"],
-                let status = dict["status"] as? Int{
-                let message = dict["message"] as? String ?? " "
-                let response = Response.init(data: data, status: status, message: message)
-                return response
-            }
-            XYWDebugLog("格式不正确:\(alamJSON)", type: .error)
-            return nil
-        }
+//        /// 从JSON得到一个Response对象
+//        static func with(alamJSON:Any) ->Response?{
+//            if let dict = alamJSON as? Dictionary<String, Any>,
+//                let data = dict["data"],
+//                let status = dict["status"] as? Int{
+//                let message = dict["message"] as? String ?? " "
+//                let response = Response.init(data: data, status: status, message: message)
+//                return response
+//            }
+//            XYWDebugLog("格式不正确:\(alamJSON)", type: .error)
+//            return nil
+//        }
     }
     
 }
@@ -64,12 +65,12 @@ extension Service{
             Alamofire.request(url).responseJSON { (response) in
                 switch response.result{
                 case .success(let value):
-                    if let resp = Response.with(alamJSON: value){
-                        sucess(resp)
-                    }else{
-                        let error = ServiceError.responseFormatterError
-                        failure?(error)
-                    }
+                    let json = JSON(value)
+                    let status = json["status"].intValue
+                    let message = json["message"].stringValue
+                    let data = json["data"]
+                    let response = Response.init(data: data, status: status, message: message)
+                    sucess(response)
                     break
                 case .failure(let error):
                     

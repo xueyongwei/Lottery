@@ -10,31 +10,33 @@ import UIKit
 import YYKit
 import SDCycleScrollView
 import Alamofire
+import SwiftyJSON
 import CodableAlamofire
+import SDWebImage
 
 private let reuseIdentifier = "Cell"
 
 class HomeFeedCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
 
-    enum DataType {
-        case topBarner
-        case winInfo
-        case funcItem
-        case hotCategory
-        case centerBarner
-        case lotterys
+    enum DataType :Int{
+        case topBarner = 1
+        case notiInfo = 2
+        case funcItem = 3
+        case hotCategory = 4
+        case centerBigImg = 5
+        case lotterys = 6
         
         var identifier:(header:String,cell:String){
             switch self {
             case .topBarner:
                 return ("PlaceHolderHeader","")
-            case .winInfo:
+            case .notiInfo:
                 return ("PlaceHolderHeader","")
             case .funcItem:
                 return ("PlaceHolderHeader","")
             case .hotCategory:
                 return ("TitleOnlyHeader","")
-            case .centerBarner:
+            case .centerBigImg:
                 return ("PlaceHolderHeader","")
             case .lotterys:
                 return ("PlaceHolderHeader","")
@@ -42,10 +44,26 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         }
     }
     
-    var topBarnerSource = [TopBarner]()
+    var topBarnerSource = [TopBarner](){
+        didSet{
+//            let imgurls = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544888547694&di=f160717912085599b315cfedb03d27f1&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180324%2F1736819eb11340dd9aaffc7b6f92c318.jpeg","http://123.59.124.153/others/upload/20181212/1544606023935_u_1394504918,2596470686_fm_26_gp_0.jpg","http://123.59.124.153/others/upload/20181212/1544606023935_u_1394504918,2596470686_fm_26_gp_0.jpg"]
+            let imgurls = topBarnerSource.map({return $0.imageUrl})
+            self.barnerCycleView.imageURLStringsGroup = imgurls
+        }
+    }
+    var notiInfo = ""{
+        didSet{
+            self.notifoView.message = notiInfo
+        }
+    }
     var funcItemSource = [FuncItem]()
-    var hotLotterySource = [Lottery]()
-    var lotterysScource = [Lottery]()
+    var hotLotterySource = [HotLottery]()
+    var bigImgItm:BigImg?{
+        didSet{
+            centerPicView.imgView.sd_setImage(with: URL.init(string: (bigImgItm?.imageUrl)!), placeholderImage: UIImage.init(named: "placeholder"))
+        }
+    }
+    var lotterycategorScource = [Lotterycategor]()
     
     var dataSource  = [DataType]()
     
@@ -55,6 +73,7 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         view.delegate = self
         return view
     }()
+    
     /// 彩票分类视图
     lazy var lotteryCatsView: LotterCatsView = {
         let view = LotterCatsView()
@@ -65,9 +84,9 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         let view = BigImageView()
         return view
     }()
-    /// 轮播信息图
-    lazy var winInfoView: WinInfoView = {
-        let view = WinInfoView()
+    /// 通知跑马灯
+    lazy var notifoView: NotiInfoView = {
+        let view = NotiInfoView()
         return view
     }()
     
@@ -78,14 +97,19 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         self.collectionView.alwaysBounceVertical = true
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(FuncItemCollectionCell.self, forCellWithReuseIdentifier: "FuncItemCollectionCell")
+        self.collectionView!.register(HotBLotteryCollectionCell.self, forCellWithReuseIdentifier: "HotBLotteryCollectionCell")
+        
         // Register SectionHeader classes
         self.collectionView.register(TitleOnlyHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TitleOnlyHeader")
         self.collectionView.register(PlaceHolderHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "PlaceHolderHeader")
         
+        
         // Register SectionFooter classes
         self.collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footer")
-
-        self.dataSource = [.topBarner,.winInfo,.funcItem,.hotCategory,.centerBarner,.lotterys]
+        
+        self.collectionView.showsVerticalScrollIndicator = false
+        self.dataSource = [.topBarner,.notiInfo,.funcItem,.hotCategory,.centerBigImg,.lotterys]
         
         requestData()
     }
@@ -109,6 +133,25 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let type = self.dataSource[indexPath.section]
+        if type == .funcItem{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FuncItemCollectionCell", for: indexPath) as! FuncItemCollectionCell
+            let data = self.funcItemSource[indexPath.item]
+            cell.titleLabel.text = data.name
+            
+            cell.imgView.sd_setImage(with: URL.init(string: data.imageUrl), placeholderImage: UIImage.init(named: "placeholder"))
+            return cell
+            
+        }else if type == .hotCategory{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HotBLotteryCollectionCell", for: indexPath) as! HotBLotteryCollectionCell
+            let data = self.hotLotterySource[indexPath.item]
+            cell.titleLabel.text = data.name
+            cell.betMaxLabel.text = data.betMax
+            cell.introductionLabel.text = data.introduction
+            cell.imgView.sd_setImage(with: URL.init(string: data.imageUrl), placeholderImage: UIImage.init(named: "placeholder"))
+            return cell
+            
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         cell.backgroundColor = UIColor.darkGray
@@ -127,18 +170,22 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
             
         }else{
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
-            footer.backgroundColor = UIColor.green
+            footer.backgroundColor = UIColor.init(rgb: 0xF5F5F5)
             return footer
         }
     }
     
     //MARK: -
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 100, height: 100)
+        let info = self.infoOf(section: indexPath.section)
+        return info.itemSize
+//        return CGSize.init(width: 100, height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 0, left: 18, bottom: 0, right: 18)
+        let info = self.infoOf(section: section)
+        return info.sectionInset
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -151,6 +198,22 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         
         return CGSize.init(width: collectionView.width, height: info.footerHeight)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        let type = self.dataSource[section]
+        if type == .funcItem {
+            return 5
+        }else if type == .hotCategory{
+            return 3
+        }
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        let type = self.dataSource[section]
+        if type == .hotCategory{
+            return 3
+        }
+        return 0
+    }
     
 
 }
@@ -160,66 +223,59 @@ extension HomeFeedCollectionViewController{
     func requestData(){
         
         Service.Lottery.index(sucess: { (response) in
+           
             guard response.status == 1 else {
                 return
             }
-            do {
-                if let data = response.data as? Array<Any>{
-                    for itm in data {
-                        let itmData = try JSONSerialization.data(withJSONObject: response.data)
-                        let model = try JSONDecoder().decode(HomeType.self, from: itmData)
-                        
-                        self.dataSource.append(model.itemType)
-                    }
-                }
-                
-                
-            }catch {
-                
+            guard let datas = response.data.array else {
+                return
             }
-            let data = response.data
+            self.dataSource.removeAll()
+            for type in datas{
+                let itemType = type["itemType"].intValue
+                let itemDatas = type["itemDatas"].arrayValue
+                
+                if let type = DataType.init(rawValue: itemType),itemDatas.count > 0{
+                    self.dataSource.append(type)
+                    self.handleDatas(itemDatas, of: type)
+                }else{
+                    XYWDebugLog("\(type)类型不支持", type: .error)
+                }
+            }
+            self.collectionView.reloadData()
         }) { (error) in
-            
+            XYWDebugLog("出错了\(error)", type: .error)
         }
         
-//        Service.Lottery.index(sucess: { (response) in
-//            guard response.status == 1 else {
-//                return
-//            }
-//
-//            let data = try JSONSerialization.data(withJSONObject: nestedJson)
-//
-////            JSONDecoder().decode(HomeType, from: s)
-////            if let data = response.data as? Array<Dictionary<String,Any>{
-////                for itm in data{
-////
-////                }
-////            }
-//        }) { (error) in
-//            XYWDebugLog(error.localizedDescription, type: .error)
-//        }
     }
 }
 //MARK: - --------------辅助方法--------------
 extension HomeFeedCollectionViewController{
     
     /// 获取分组的信息
-    func infoOf(section:Int) -> (dataCount:Int,headerHeight:CGFloat,footerHeight:CGFloat){
+    func infoOf(section:Int) -> (dataCount:Int,headerHeight:CGFloat,footerHeight:CGFloat,sectionInset:UIEdgeInsets,itemSize:CGSize){
         let type = self.dataSource[section]
         switch  type{
         case .topBarner:
             let height = (321.0/720.0 )*YYScreenSize().width
-            return (0,height,0)
-        case .winInfo:
-            return (0,42,9)
+            return (0,height,0,UIEdgeInsets.zero,CGSize.zero)
+        case .notiInfo:
+            return (0,42.0,9.0,UIEdgeInsets.zero,CGSize.zero)
         case .funcItem:
-            return (funcItemSource.count,0,0)
+            let sectionInset = UIEdgeInsets.init(top: 18, left: 18, bottom: 18, right: 18)
+            
+            let widht = (self.collectionView.width - sectionInset.left - sectionInset.right - 15)*0.25
+            let size = CGSize.init(width: widht, height: 62)
+            return (funcItemSource.count,0,0,sectionInset,size)
         case .hotCategory:
-            return (4,55,0)
-        case .centerBarner:
-            return (0,91,9)
+            let sectionInset = UIEdgeInsets.init(top: 0, left: 14, bottom: 12, right: 14)
+            let width = (self.collectionView.width - sectionInset.left - sectionInset.right-3)*0.5
+            let height = (100.0 / 173.0) * width
+            return (self.hotLotterySource.count,56,9,sectionInset,CGSize.init(width: width, height: height))
+        case .centerBigImg:
+            return (0,91,9,UIEdgeInsets.zero,CGSize.zero)
         case .lotterys:
-            return (lotterysScource.count,62,0)
+            return (lotterycategorScource.count,62,0,UIEdgeInsets.zero,CGSize.init(width: 100, height: 100))
         }
     }
     
@@ -229,11 +285,15 @@ extension HomeFeedCollectionViewController{
         case .topBarner:
             showContent(barnerCycleView, in: header)
             break
-        case .centerBarner:
+        case .hotCategory:
+            let view = header as! TitleOnlyHeader
+//            view.spLine.isHidden = false
+            view.titleLabel.text = "热门彩种"
+        case .centerBigImg:
             showContent(centerPicView, in: header)
             break
-        case .winInfo:
-            showContent(winInfoView, in: header)
+        case .notiInfo:
+            showContent(notifoView, in: header)
         case .lotterys:
             showContent(lotteryCatsView, in: header)
         default:
@@ -250,123 +310,36 @@ extension HomeFeedCollectionViewController{
         }
         header.layoutIfNeeded()
     }
+    
+    func handleDatas(_ datas:[JSON],of type:DataType){
+        switch type {
+        case .topBarner:
+            self.topBarnerSource = TopBarner.getListFrom(datas)
+            break
+        case .notiInfo:// 通知只取第一条
+            let noti = datas.first!
+            self.notiInfo = noti["content"].stringValue
+        case .funcItem:
+            self.funcItemSource = FuncItem.getListFrom(datas)
+        case .hotCategory:
+            self.hotLotterySource = HotLottery.getListFrom(datas)
+        case .centerBigImg:
+            self.bigImgItm = BigImg.getListFrom(datas).first!
+        case .lotterys:
+            self.lotterycategorScource = Lotterycategor.getListFrom(datas)
+            break
+        default:
+            break
+        }
+    }
 }
 
 
-//MARK: - --------------类中类--------------
-extension HomeFeedCollectionViewController{
-    //MARK: ----模型
-    struct HomeType: Decodable{
-        var itemType:Int
-        var itemDatas:[HomeItem]
-    }
-    class HomeItem:Decodable {
-        
-    }
-    class TopBarner:HomeItem {
-        var name:String?
-        var imgUrl:String?
-        var clickUrl:String?
-    }
-    class FuncItem :HomeItem{
-        var name:String?
-        var imgUrl:String?
-    }
-    
-    class Lottery :HomeItem{
-        var name:String?
-        var imgUrl:String?
-        var type:Int?
-        var timeCycle:Int?
-        var lossPerCent:Float?
-    }
-    //MARK: ----ReusableView
-    class PlaceHolderHeader:CodeLayoutReusableView{
-        override func codeCustomSubviews() {
-            self.backgroundColor = UIColor.red
-        }
-    }
-    class TitleOnlyHeader:CodeLayoutReusableView{
-        lazy var titleLabel: UILabel = {
-            let view = UILabel()
-            view.textAlignment = .left
-            view.text = "热门彩票"
-            view.font = UIFont.systemFont(ofSize: 17)
-            return view
-        }()
-        
-        //MARK: ----
-        override func codeCustomSubviews(){
-            addSubview(titleLabel)
-            titleLabel.snp.makeConstraints { (make) in
-                make.centerY.equalToSuperview()
-                make.left.equalToSuperview().offset(18)
-            }
-        }
-    }
-    //MARK: ----CollectionCell
-    
-    //MARK: ----View
-    
-    /// 信息公告
-    class WinInfoView: CodeLayoutView{
-        lazy var iconView: UIImageView = {
-            let view = UIImageView()
-            view.contentMode = .scaleAspectFit
-            view.image = UIImage.init(named: "home_公告")
-            return view
-        }()
-        override func codeCustomSubviews(){
-            addSubview(iconView)
-            iconView.snp.makeConstraints { (make) in
-                make.centerY.equalToSuperview()
-                make.left.equalToSuperview().offset(17)
-                make.width.equalTo(17)
-                make.height.equalTo(17)
-            }
-        }
-    }
-    
-    /// 大图View
-    class BigImageView: CodeLayoutView{
-        lazy var iconView: UIImageView = {
-            let view = UIImageView()
-            view.contentMode = .scaleAspectFill
-            view.image = UIImage.init(named: "home_注单点击")
-            view.clipsToBounds = true
-            return view
-        }()
-        override func codeCustomSubviews(){
-            addSubview(iconView)
-            iconView.snp.makeConstraints { (make) in
-                make.edges.equalToSuperview()
-            }
-        }
-    }
-    
-   /// 彩票分类
-    class LotterCatsView:CodeLayoutView{
-        lazy var titleLabel: UILabel = {
-            let view = UILabel()
-            view.textAlignment = .center
-            view.text = "热门彩票"
-            view.font = UIFont.systemFont(ofSize: 17)
-            return view
-        }()
-        
-        override func codeCustomSubviews(){
-            addSubview(titleLabel)
-            titleLabel.snp.makeConstraints { (make) in
-                make.centerY.equalToSuperview()
-                make.left.equalToSuperview().offset(18)
-            }
-        }
-    }
-    
-    
-}
 
 //MARK: - --------------SDCycleScrollViewDelegate--------------
 extension HomeFeedCollectionViewController:SDCycleScrollViewDelegate{
-    
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
+        let itm = self.topBarnerSource[index]
+        XYWDebugLog("点击了\(itm.webViewUrl)", type: .warning)
+    }
 }
