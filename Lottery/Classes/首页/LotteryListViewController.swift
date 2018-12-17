@@ -57,6 +57,7 @@ class LotteryListViewController: UIViewController {
         
         let titles = self.lotterycategorScource.map({return $0.name})
         self.myCategoryView.titles = titles
+        self.myCategoryView.reloadData()
         
         scrollView.removeAllSubviews()
         
@@ -66,7 +67,7 @@ class LotteryListViewController: UIViewController {
             let lottery = self.lotterycategorScource[i]
             
             let layout = UICollectionViewFlowLayout()
-            let sectionInset = UIEdgeInsets.init(top: 8, left: 18, bottom: 8, right: 18)
+            let sectionInset = UIEdgeInsets.init(top: 18, left: 18, bottom: 18, right: 18)
             layout.sectionInset = sectionInset
             layout.minimumInteritemSpacing = 20
             layout.minimumLineSpacing = 10
