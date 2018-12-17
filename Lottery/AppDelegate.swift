@@ -16,9 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //注册分享平台
+        self.registSharePlatforms()
+        
         return true
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -43,4 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
+//MARK: - --------------Mob分享--------------
+extension AppDelegate{
+    /// 注册分享平台
+    func registSharePlatforms(){
+        ShareSDK.registPlatforms { (platformsRegister) in
+            //QQ
+            platformsRegister?.setupQQ(withAppId: "100371282", appkey: "aed9b0303e3ed1e27bae87c33761161d")
+            //微信
+            platformsRegister?.setupWeChat(withAppId: "wx617c77c82218ea2c", appSecret: "c7253e5289986cf4c4c74d1ccc185fb1")
+            //新浪
+            platformsRegister?.setupSinaWeibo(withAppkey: "568898243", appSecret: "38a4f8204cc784f81f9f0daaf31e02e3", redirectUrl: "http://www.sharesdk.cn")
+        }
+    }
+}
