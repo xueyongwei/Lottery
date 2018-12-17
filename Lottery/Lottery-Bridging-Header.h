@@ -17,4 +17,5 @@
 #import "UIScrollView+EmptyDataSet.h"
 // 轮播
 #import "SDCycleScrollView.h"
-
+// 分类滑动切换
+#import "BaseJXCategoryViewController.h"

@@ -91,12 +91,5 @@ extension ChoseBetWayViewController{
 }
 //MARK: - --------------类中类--------------
 extension ChoseBetWayViewController{
-    enum LotteryCategory {
-        case ssc
-        case kuai3
-        case shiyixuan5
-        case pk10
-        case pcdandan
-        case liuhecai
-    }
+   
 }

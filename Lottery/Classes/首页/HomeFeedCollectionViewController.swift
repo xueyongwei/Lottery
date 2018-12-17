@@ -79,6 +79,13 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         let view = LotterCatsView()
         return view
     }()
+    /// 彩票分类视图
+    lazy var lotteryCatsVC: LotteryListViewController = {
+        let vc = LotteryListViewController()
+        self.addChild(vc)
+        vc.didMove(toParent: self)
+        return vc
+    }()
     /// 中间的插图
     lazy var centerPicView: BigImageView = {
         let view = BigImageView()
@@ -275,7 +282,8 @@ extension HomeFeedCollectionViewController{
         case .centerBigImg:
             return (0,91,9,UIEdgeInsets.zero,CGSize.zero)
         case .lotterys:
-            return (lotterycategorScource.count,62,0,UIEdgeInsets.zero,CGSize.init(width: 100, height: 100))
+            return (0,250,0,UIEdgeInsets.zero,CGSize.zero)
+//            return (lotterycategorScource.count,62,0,UIEdgeInsets.zero,CGSize.init(width: 100, height: 100))
         }
     }
     
@@ -295,7 +303,8 @@ extension HomeFeedCollectionViewController{
         case .notiInfo:
             showContent(notifoView, in: header)
         case .lotterys:
-            showContent(lotteryCatsView, in: header)
+            showContent(lotteryCatsVC.view, in: header)
+//            showContent(lotteryCatsView, in: header)
         default:
             break
         }

@@ -32,6 +32,11 @@
 		0DD30C9F21C56BC7008AECFA /* LotteryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C9E21C56BC7008AECFA /* LotteryListViewController.swift */; };
 		4727CD7021C7734D00AAFDB7 /* MBProgressHUD+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD6E21C7734D00AAFDB7 /* MBProgressHUD+Utility.m */; };
 		4727CD7421C77F0F00AAFDB7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7321C77F0F00AAFDB7 /* UIScrollView+EmptyDataSet.m */; };
+		4727CD7821C781BF00AAFDB7 /* BaseJXCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7621C781BF00AAFDB7 /* BaseJXCategoryViewController.m */; };
+		4727CD7B21C781D700AAFDB7 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7A21C781D700AAFDB7 /* TitleViewController.m */; };
+		4727CD7E21C782C500AAFDB7 /* UIWindow+JXSafeArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7C21C782C500AAFDB7 /* UIWindow+JXSafeArea.m */; };
+		4727CD8021C7886B00AAFDB7 /* LotteryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */; };
+		4727CD8221C79C6C00AAFDB7 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8121C79C6C00AAFDB7 /* Lottery.swift */; };
 		4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */ = {isa = PBXBuildFile; fileRef = 4781AC8721C3889F00E3DD54 /* SSCai.json */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
@@ -89,6 +94,14 @@
 		4727CD6F21C7734D00AAFDB7 /* MBProgressHUD+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Utility.h"; sourceTree = "<group>"; };
 		4727CD7221C77F0F00AAFDB7 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		4727CD7321C77F0F00AAFDB7 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		4727CD7621C781BF00AAFDB7 /* BaseJXCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseJXCategoryViewController.m; sourceTree = "<group>"; };
+		4727CD7721C781BF00AAFDB7 /* BaseJXCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseJXCategoryViewController.h; sourceTree = "<group>"; };
+		4727CD7921C781D700AAFDB7 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		4727CD7A21C781D700AAFDB7 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		4727CD7C21C782C500AAFDB7 /* UIWindow+JXSafeArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JXSafeArea.m"; sourceTree = "<group>"; };
+		4727CD7D21C782C500AAFDB7 /* UIWindow+JXSafeArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+JXSafeArea.h"; sourceTree = "<group>"; };
+		4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCollectionViewController.swift; sourceTree = "<group>"; };
+		4727CD8121C79C6C00AAFDB7 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
 		4781AC8721C3889F00E3DD54 /* SSCai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SSCai.json; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
 		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
@@ -200,6 +213,7 @@
 				0DD30C8121C15260008AECFA /* HomeViewController.swift */,
 				0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */,
 				0DD30C9E21C56BC7008AECFA /* LotteryListViewController.swift */,
+				4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */,
 				47C0192521C257F6003DA90A /* Home.storyboard */,
 			);
 			path = "首页";
@@ -275,6 +289,19 @@
 			path = DZNEmptyDataSet;
 			sourceTree = "<group>";
 		};
+		4727CD7521C7819F00AAFDB7 /* JXCategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4727CD7D21C782C500AAFDB7 /* UIWindow+JXSafeArea.h */,
+				4727CD7C21C782C500AAFDB7 /* UIWindow+JXSafeArea.m */,
+				4727CD7921C781D700AAFDB7 /* TitleViewController.h */,
+				4727CD7A21C781D700AAFDB7 /* TitleViewController.m */,
+				4727CD7721C781BF00AAFDB7 /* BaseJXCategoryViewController.h */,
+				4727CD7621C781BF00AAFDB7 /* BaseJXCategoryViewController.m */,
+			);
+			path = JXCategoryViewController;
+			sourceTree = "<group>";
+		};
 		47BB6E6121C0BCCF00E71BAE /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +346,7 @@
 		47BB6E6B21C0E5BC00E71BAE /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				4727CD7521C7819F00AAFDB7 /* JXCategoryViewController */,
 				4727CD7121C77F0F00AAFDB7 /* DZNEmptyDataSet */,
 			);
 			path = Support;
@@ -408,6 +436,7 @@
 				0DD30C6A21BEA605008AECFA /* HallCollectionViewController.swift */,
 				0DD30C8E21C2982C008AECFA /* ChoseBetWayViewController.swift */,
 				0DD30C7121BEA901008AECFA /* LotteryHall.storyboard */,
+				4727CD8121C79C6C00AAFDB7 /* Lottery.swift */,
 			);
 			path = "购彩大厅";
 			sourceTree = "<group>";
@@ -561,15 +590,18 @@
 				0DD30C8621C152F6008AECFA /* MineViewController.swift in Sources */,
 				0DD30C9B21C53688008AECFA /* HomeFeedViews.swift in Sources */,
 				47C0192E21C25D00003DA90A /* CodeLayoutView.swift in Sources */,
+				4727CD8021C7886B00AAFDB7 /* LotteryCollectionViewController.swift in Sources */,
 				0DD30C9D21C536E5008AECFA /* HomeFeedModels.swift in Sources */,
 				47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */,
 				0DD30C9421C4D752008AECFA /* Service.swift in Sources */,
 				47BB6E7A21C1014400E71BAE /* QdxdsqCollectionHeader.swift in Sources */,
 				0DD30C8821C15358008AECFA /* ComeLotteryViewController.swift in Sources */,
+				4727CD7E21C782C500AAFDB7 /* UIWindow+JXSafeArea.m in Sources */,
 				47E8350421BE376B00B4B6F8 /* ViewController.swift in Sources */,
 				0DD30C9921C523EF008AECFA /* JXMarqueeView.swift in Sources */,
 				0DD30C9221C4D288008AECFA /* APICenter.swift in Sources */,
 				0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */,
+				4727CD7821C781BF00AAFDB7 /* BaseJXCategoryViewController.m in Sources */,
 				0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */,
 				0DD30C6E21BEA82D008AECFA /* FFsscViewController.swift in Sources */,
 				0DD30C9F21C56BC7008AECFA /* LotteryListViewController.swift in Sources */,
@@ -588,6 +620,7 @@
 				47E8351721BE7B1900B4B6F8 /* LotteryHallViewController.swift in Sources */,
 				47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */,
 				47BB6E7D21C10C6900E71BAE /* CollectionSelectedChangedProtocol.swift in Sources */,
+				4727CD8221C79C6C00AAFDB7 /* Lottery.swift in Sources */,
 				47BB6E7521C0F6B600E71BAE /* FfsscStarCollectionViewController.swift in Sources */,
 				4727CD7421C77F0F00AAFDB7 /* UIScrollView+EmptyDataSet.m in Sources */,
 				47BB6E7F21C10F0100E71BAE /* SSCCountCountable.swift in Sources */,
@@ -595,6 +628,7 @@
 				0DD30C8F21C2982C008AECFA /* ChoseBetWayViewController.swift in Sources */,
 				47BB6E7821C0F75300E71BAE /* NumberRoundCollectionViewCell.swift in Sources */,
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
+				4727CD7B21C781D700AAFDB7 /* TitleViewController.m in Sources */,
 				47C0193021C25E06003DA90A /* CodeLayoutReusableView.swift in Sources */,
 				47C0192C21C25C87003DA90A /* ViewCodeLayoutable.swift in Sources */,
 			);
