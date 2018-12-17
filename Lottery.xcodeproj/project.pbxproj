@@ -37,6 +37,7 @@
 		4727CD7E21C782C500AAFDB7 /* UIWindow+JXSafeArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7C21C782C500AAFDB7 /* UIWindow+JXSafeArea.m */; };
 		4727CD8021C7886B00AAFDB7 /* LotteryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */; };
 		4727CD8221C79C6C00AAFDB7 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8121C79C6C00AAFDB7 /* Lottery.swift */; };
+		4727CD8621C7B30D00AAFDB7 /* PushSchemeOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */; };
 		4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */ = {isa = PBXBuildFile; fileRef = 4781AC8721C3889F00E3DD54 /* SSCai.json */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
@@ -102,6 +103,7 @@
 		4727CD7D21C782C500AAFDB7 /* UIWindow+JXSafeArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+JXSafeArea.h"; sourceTree = "<group>"; };
 		4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCollectionViewController.swift; sourceTree = "<group>"; };
 		4727CD8121C79C6C00AAFDB7 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
+		4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSchemeOpenable.swift; sourceTree = "<group>"; };
 		4781AC8721C3889F00E3DD54 /* SSCai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SSCai.json; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
 		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				47C0192B21C25C87003DA90A /* ViewCodeLayoutable.swift */,
+				4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */,
 			);
 			path = BaseProtocol;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				0DD30C8F21C2982C008AECFA /* ChoseBetWayViewController.swift in Sources */,
 				47BB6E7821C0F75300E71BAE /* NumberRoundCollectionViewCell.swift in Sources */,
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
+				4727CD8621C7B30D00AAFDB7 /* PushSchemeOpenable.swift in Sources */,
 				4727CD7B21C781D700AAFDB7 /* TitleViewController.m in Sources */,
 				47C0193021C25E06003DA90A /* CodeLayoutReusableView.swift in Sources */,
 				47C0192C21C25C87003DA90A /* ViewCodeLayoutable.swift in Sources */,
