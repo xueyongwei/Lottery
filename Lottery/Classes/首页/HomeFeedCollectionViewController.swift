@@ -117,7 +117,15 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
         
         self.collectionView.showsVerticalScrollIndicator = false
         self.dataSource = [.topBarner,.notiInfo,.funcItem,.hotCategory,.centerBigImg,.lotterys]
+        let header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(requestData))
+        header?.lastUpdatedTimeLabel.isHidden = true
+        header?.isAutomaticallyChangeAlpha = true
+        self.collectionView.mj_header = header
         
+//        let refreshControl = UIRefreshControl.init()
+//        refreshControl.tintColor = UIColor.darkGray
+//        refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+//        self.collectionView.refreshControl = refreshControl
         requestData()
     }
 
@@ -227,10 +235,10 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
 //MARK: - --------------请求数据--------------
 extension HomeFeedCollectionViewController{
     /// 请求首页的数据
-    func requestData(){
+    @objc func requestData(){
         
         Service.Lottery.index(sucess: { (response) in
-           
+            self.collectionView.mj_header.endRefreshing()
             guard response.status == 1 else {
                 return
             }
