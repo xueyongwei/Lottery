@@ -23,4 +23,8 @@ target 'Lottery' do
     pod 'SDCycleScrollView'
     #分类滑动
     pod 'JXCategoryView'
+    #mob推送
+    pod 'mob_pushsdk'
+    #mob分享
+    
 end
