@@ -63,7 +63,11 @@ class HomeFeedCollectionViewController: UICollectionViewController,UICollectionV
             centerPicView.imgView.sd_setImage(with: URL.init(string: (bigImgItm?.imageUrl)!), placeholderImage: UIImage.init(named: "placeholder"))
         }
     }
-    var lotterycategorScource = [Lotterycategor]()
+    var lotterycategorScource = [Lotterycategor](){
+        didSet{
+            self.lotteryCatsVC.lotterycategorScource = lotterycategorScource
+        }
+    }
     
     var dataSource  = [DataType]()
     

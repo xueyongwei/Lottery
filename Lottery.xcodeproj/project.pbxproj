@@ -211,6 +211,7 @@
 		0DD30C8021C1522A008AECFA /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				4727CD8721C7C82700AAFDB7 /* Models */,
 				0DD30C9721C523E0008AECFA /* Views */,
 				0DD30C8121C15260008AECFA /* HomeViewController.swift */,
 				0DD30C8921C1541C008AECFA /* HomeFeedCollectionViewController.swift */,
@@ -260,7 +261,6 @@
 			children = (
 				0DD30C9821C523EF008AECFA /* JXMarqueeView.swift */,
 				0DD30C9A21C53688008AECFA /* HomeFeedViews.swift */,
-				0DD30C9C21C536E5008AECFA /* HomeFeedModels.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +302,14 @@
 				4727CD7621C781BF00AAFDB7 /* BaseJXCategoryViewController.m */,
 			);
 			path = JXCategoryViewController;
+			sourceTree = "<group>";
+		};
+		4727CD8721C7C82700AAFDB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0DD30C9C21C536E5008AECFA /* HomeFeedModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		47BB6E6121C0BCCF00E71BAE /* Common */ = {

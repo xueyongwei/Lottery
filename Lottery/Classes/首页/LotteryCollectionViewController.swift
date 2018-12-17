@@ -9,24 +9,22 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class LotteryCollectionViewController: UICollectionViewController {
 
+    var lotteryList = [HomeFeedCollectionViewController.Lottery]()
+    
     var cate:LotteryCategory = .ssc
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.bounces = false
 
+        self.collectionView.backgroundColor = UIColor.white
         
-//        self.collectionView.backgroundColor = UIColor.init(red: arc4random()%255.0/255.0, green: arc4random()%255/255.0, blue: arc4random()%255/255.0, alpha: 1)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(HomeLotteryCollectionCell.self, forCellWithReuseIdentifier: "HomeLotteryCollectionCell")
 
         // Do any additional setup after loading the view.
     }
@@ -49,20 +47,14 @@ class LotteryCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if self.cate == .ssc {
-            return 10
-        }else if cate == .pk10{
-            return 5
-        }
-        return 4
+        return self.lotteryList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        cell.backgroundColor = UIColor.lightGray
-        // Configure the cell
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeLotteryCollectionCell", for: indexPath) as! HomeLotteryCollectionCell
+        let lottery = self.lotteryList[indexPath.item]
+        cell.titleLabel.text = lottery.name
+        cell.imgView.sd_setImage(with: URL.init(string: lottery.icon), placeholderImage: UIImage.init(named: "placeholder"))
         return cell
     }
 
@@ -97,4 +89,35 @@ class LotteryCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+extension LotteryCollectionViewController{
+    class HomeLotteryCollectionCell:CodeLayoutCollectionViewCell{
+        lazy var imgView: UIImageView = {
+            let imgv = UIImageView()
+            imgv.contentMode = .scaleAspectFit
+            return imgv
+        }()
+        lazy var titleLabel: UILabel = {
+            let view = UILabel()
+            view.textColor = UIColor.init(rgb: 0x333333)
+            view.font = UIFont.systemFont(ofSize: 12)
+            view.textAlignment = .center
+            return view
+        }()
+        
+        override func codeCustomSubviews() {
+            contentView.addSubview(imgView)
+            imgView.snp.makeConstraints { (make) in
+                make.centerX.equalToSuperview()
+                make.top.equalToSuperview()
+                make.height.equalTo(45)
+                make.width.equalTo(45)
+            }
+            contentView.addSubview(titleLabel)
+            titleLabel.snp.makeConstraints { (make) in
+                make.bottom.left.right.equalToSuperview()
+            }
+        }
+        
+    }
 }

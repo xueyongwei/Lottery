@@ -46,6 +46,7 @@ extension HomeFeedCollectionViewController{
         }
     }
     //MARK: ----CollectionCell
+    
     class FuncItemCollectionCell:CodeLayoutCollectionViewCell{
         lazy var imgView: UIImageView = {
             let imgv = UIImageView()
@@ -156,6 +157,7 @@ extension HomeFeedCollectionViewController{
 //            backView.layer.shadowPath = UIBezierPath.init(roundedRect: backView.bounds, cornerRadius: 5).cgPath
         }
     }
+    
     //MARK: ----View
     
     /// 信息公告
