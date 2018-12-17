@@ -5,6 +5,32 @@ PODS:
   - JXCategoryView (1.1.4)
   - MBProgressHUD (0.9.1)
   - MJRefresh (3.1.15.7)
+  - mob_pushsdk (1.6.0):
+    - mob_pushsdk/MobPush (= 1.6.0)
+    - MOBFoundation
+  - mob_pushsdk/MobPush (1.6.0):
+    - MOBFoundation
+  - mob_sharesdk (4.2.1):
+    - mob_sharesdk/ShareSDK (= 4.2.1)
+    - MOBFoundation
+  - mob_sharesdk/ShareSDK (4.2.1):
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKExtension (4.2.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/QQ (4.2.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo (4.2.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.2.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKUI (4.2.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - MOBFoundation (3.2.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.3):
@@ -21,6 +47,13 @@ DEPENDENCIES:
   - JXCategoryView
   - MBProgressHUD (= 0.9.1)
   - MJRefresh
+  - mob_pushsdk
+  - mob_sharesdk
+  - mob_sharesdk/ShareSDKExtension
+  - mob_sharesdk/ShareSDKPlatforms/QQ
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
+  - mob_sharesdk/ShareSDKPlatforms/WeChat
+  - mob_sharesdk/ShareSDKUI
   - SDCycleScrollView
   - SDWebImage (~> 4.0)
   - SnapKit
@@ -34,6 +67,9 @@ SPEC REPOS:
     - JXCategoryView
     - MBProgressHUD
     - MJRefresh
+    - mob_pushsdk
+    - mob_sharesdk
+    - MOBFoundation
     - SDCycleScrollView
     - SDWebImage
     - SnapKit
@@ -46,12 +82,15 @@ SPEC CHECKSUMS:
   JXCategoryView: b255f32c0a8e54f5c7769a9ad6ec6940318d23c9
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  mob_pushsdk: edfbef13b30df2a90adb3c45ba96568858ce155c
+  mob_sharesdk: e6a6f9b2b6edc29af57c31756a7f0b4143cba50c
+  MOBFoundation: ca11e6640e995875ff755faa56ea324eed260e70
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   YYKit: 7e27f6b55883bfe3ec2b98e7ad9c38fcbb92a1c5
 
-PODFILE CHECKSUM: b10961504af9080d30b7d80d2550605bf326b44e
+PODFILE CHECKSUM: 5d2aa50c5b498589af859c2490424739d27d6667
 
 COCOAPODS: 1.6.0.beta.2

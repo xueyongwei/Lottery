@@ -26,5 +26,11 @@ target 'Lottery' do
     #mob推送
     pod 'mob_pushsdk'
     #mob分享
+    pod 'mob_sharesdk'
+    pod 'mob_sharesdk/ShareSDKUI'
+    pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
+    pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
+    pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
+    pod 'mob_sharesdk/ShareSDKExtension'
     
 end
