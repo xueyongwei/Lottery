@@ -1,0 +1,7 @@
+.DS_Store
+xcuserdata
+.vscode/
+*.xcuserstate
+*.xcbkptlist
+UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
