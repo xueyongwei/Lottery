@@ -19,7 +19,8 @@
 #import "SDCycleScrollView.h"
 // 分类滑动切换
 #import "BaseJXCategoryViewController.h"
-// mob分享
+// Mob分享
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
-
+// Mob推送
+#import <MobPush/MobPush.h>

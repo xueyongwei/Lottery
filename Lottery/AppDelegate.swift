@@ -58,4 +58,43 @@ extension AppDelegate{
             platformsRegister?.setupSinaWeibo(withAppkey: "568898243", appSecret: "38a4f8204cc784f81f9f0daaf31e02e3", redirectUrl: "http://www.sharesdk.cn")
         }
     }
+    /// 注册推送
+    func registPushService(){
+        #if DEBUG
+        MobPush.setAPNsForProduction(false)
+        #else
+        MobPush.setAPNsForProduction(true)
+        #endif
+        let pushConfig = MPushNotificationConfiguration()
+        pushConfig.types = [MPushAuthorizationOptions.badge , MPushAuthorizationOptions.sound , MPushAuthorizationOptions.alert]
+        MobPush.setupNotification(pushConfig)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveMessage(notification:)), name: NSNotification.Name.MobPushDidReceiveMessage, object: nil)
+
+    }
+    /// 收到了推送消息
+    @objc func didReceiveMessage(notification:NSNotification){
+        
+        guard let message = notification.object as? MPushMessage else { return  }
+        
+        switch message.messageType {
+        case .custom:
+            break
+        case .apns:
+            if UIApplication.shared.applicationState == .active {//前台
+                XYWDebugLog("前台通知", type: .warning)
+            }else{//后台
+                XYWDebugLog("后台通知", type: .warning)
+            }
+            break
+        case .clicked:
+            XYWDebugLog("点击了通知", type: .warning)
+            break
+        case .local:
+            break
+        case .udpNotify:
+            break
+        }
+    }
+    
 }

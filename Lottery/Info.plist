@@ -6,6 +6,8 @@
 	<string></string>
 	<key>MOBAppkey</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要使用你的位置</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
