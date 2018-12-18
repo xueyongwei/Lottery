@@ -41,6 +41,7 @@ PODS:
   - YYKit (0.9.6):
     - YYKit/no-arc (= 0.9.6)
   - YYKit/no-arc (0.9.6)
+  - ZJJTimeCountDown (1.0.2)
 
 DEPENDENCIES:
   - CodableAlamofire
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - SnapKit
   - SwiftyJSON
   - YYKit (= 0.9.6)
+  - ZJJTimeCountDown
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -75,6 +77,7 @@ SPEC REPOS:
     - SnapKit
     - SwiftyJSON
     - YYKit
+    - ZJJTimeCountDown
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
@@ -90,7 +93,8 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   YYKit: 7e27f6b55883bfe3ec2b98e7ad9c38fcbb92a1c5
+  ZJJTimeCountDown: 7dad4e4e8071cc97c5329daf254a04213d04d4c2
 
-PODFILE CHECKSUM: 5d2aa50c5b498589af859c2490424739d27d6667
+PODFILE CHECKSUM: c7bebdb62ec4f5cc500b94501a0ec9cdcf2da321
 
 COCOAPODS: 1.6.0.beta.2

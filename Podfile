@@ -32,5 +32,6 @@ target 'Lottery' do
     pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
     pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
     pod 'mob_sharesdk/ShareSDKExtension'
-    
+    #倒计时
+    pod 'ZJJTimeCountDown'
 end
