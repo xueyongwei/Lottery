@@ -20,6 +20,7 @@ class LotteryListViewController: UIViewController {
     lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.isPagingEnabled = true
+        view.showsHorizontalScrollIndicator = false
         return view
     }()
     

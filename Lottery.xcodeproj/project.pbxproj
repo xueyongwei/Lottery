@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8244D621C93002008CC823 /* ComeLotteryTableViewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */; };
 		0DD30C6721BE9EEC008AECFA /* MathTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6621BE9EEC008AECFA /* MathTool.swift */; };
 		0DD30C6921BEA4A5008AECFA /* CalculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6821BEA4A5008AECFA /* CalculateTool.swift */; };
 		0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6A21BEA605008AECFA /* HallCollectionViewController.swift */; };
@@ -38,7 +39,7 @@
 		4727CD8021C7886B00AAFDB7 /* LotteryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */; };
 		4727CD8221C79C6C00AAFDB7 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8121C79C6C00AAFDB7 /* Lottery.swift */; };
 		4727CD8621C7B30D00AAFDB7 /* PushSchemeOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */; };
-		475A923F21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475A923E21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard */; };
+		475A923F21C8F7A9007E77B4 /* ComeLottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475A923E21C8F7A9007E77B4 /* ComeLottery.storyboard */; };
 		475A924121C8F997007E77B4 /* ComeLotteryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A924021C8F997007E77B4 /* ComeLotteryTableViewController.swift */; };
 		4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */ = {isa = PBXBuildFile; fileRef = 4781AC8721C3889F00E3DD54 /* SSCai.json */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeLotteryTableViewViews.swift; sourceTree = "<group>"; };
 		0DD30C6221BE9EB3008AECFA /* Lottery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lottery-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DD30C6621BE9EEC008AECFA /* MathTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTool.swift; sourceTree = "<group>"; };
 		0DD30C6821BEA4A5008AECFA /* CalculateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTool.swift; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCollectionViewController.swift; sourceTree = "<group>"; };
 		4727CD8121C79C6C00AAFDB7 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
 		4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSchemeOpenable.swift; sourceTree = "<group>"; };
-		475A923E21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComeLotteryStoryboard.storyboard; sourceTree = "<group>"; };
+		475A923E21C8F7A9007E77B4 /* ComeLottery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComeLottery.storyboard; sourceTree = "<group>"; };
 		475A924021C8F997007E77B4 /* ComeLotteryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeLotteryTableViewController.swift; sourceTree = "<group>"; };
 		4781AC8721C3889F00E3DD54 /* SSCai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SSCai.json; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D8244D421C92FE7008CC823 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0DD30C5F21BE9E7F008AECFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,9 +239,10 @@
 		0DD30C8321C152E2008AECFA /* 开奖 */ = {
 			isa = PBXGroup;
 			children = (
+				0D8244D421C92FE7008CC823 /* Views */,
 				0DD30C8721C15358008AECFA /* ComeLotteryViewController.swift */,
 				475A924021C8F997007E77B4 /* ComeLotteryTableViewController.swift */,
-				475A923E21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard */,
+				475A923E21C8F7A9007E77B4 /* ComeLottery.storyboard */,
 			);
 			path = "开奖";
 			sourceTree = "<group>";
@@ -531,7 +542,7 @@
 				47C0192621C257F6003DA90A /* Home.storyboard in Resources */,
 				47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */,
 				0DD30C7021BEA851008AECFA /* FFSSCS.storyboard in Resources */,
-				475A923F21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard in Resources */,
+				475A923F21C8F7A9007E77B4 /* ComeLottery.storyboard in Resources */,
 				4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +681,7 @@
 				0DD30C7D21C150FA008AECFA /* RootViewController.swift in Sources */,
 				47C0193221C25E1C003DA90A /* CodeLayoutCollectionViewCell.swift in Sources */,
 				47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */,
+				0D8244D621C93002008CC823 /* ComeLotteryTableViewViews.swift in Sources */,
 				47E8351721BE7B1900B4B6F8 /* LotteryHallViewController.swift in Sources */,
 				47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */,
 				47BB6E7D21C10C6900E71BAE /* CollectionSelectedChangedProtocol.swift in Sources */,

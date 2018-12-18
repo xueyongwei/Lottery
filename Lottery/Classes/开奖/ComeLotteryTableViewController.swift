@@ -16,6 +16,8 @@ class ComeLotteryTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+        self.tableView.register(BaseComeLotteryCell.self, forCellReuseIdentifier: "BaseComeLotteryCell")
+        self.tableView.tableFooterView = UIView()
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -23,24 +25,24 @@ class ComeLotteryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 6
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
+//        self.config(cell: cell, at: indexPath)
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,29 +91,9 @@ class ComeLotteryTableViewController: UITableViewController {
 
 }
 
-//MARK: - --------------类中类--------------
 extension ComeLotteryTableViewController{
-    class BaseComeLotteryCell:CodeLayoutCollectionViewCell{
-        lazy var titleLabel: UILabel = {
-            let label = UILabel()
-            return label
-        }()
-        lazy var iconImgView: UIImageView = {
-            let view = UIImageView()
-            return view
-        }()
-        lazy var timeLabel: UILabel = {
-            let label = UILabel()
-            return label
-        }()
-        lazy var descLabel: UILabel = {
-            let label = UILabel()
-            return label
-        }()
-       
-        override func codeCustomSubviews() {
-            
-        }
+    
+    func config(cell:UITableViewCell,at indexPath:IndexPath){
         
     }
 }

@@ -142,38 +142,22 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CFx-5H-W4D" kind="relationship" relationship="rootViewController" id="PMe-tM-BB2"/>
+                        <segue destination="9tD-gl-4dx" kind="relationship" relationship="rootViewController" id="ocr-ka-qfE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcW-Ih-bGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1201" y="-97"/>
         </scene>
-        <!--Come Lottery View Controller-->
-        <scene sceneID="CrR-4y-5fr">
+        <!--ComeLottery-->
+        <scene sceneID="osc-Rf-4Bx">
             <objects>
-                <viewController id="CFx-5H-W4D" customClass="ComeLotteryViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ap2-dg-yMh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-It-39a">
-                                <rect key="frame" x="35" y="112" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onShare:" destination="CFx-5H-W4D" eventType="touchUpInside" id="5bu-Cp-itj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="TvG-SY-2R0"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gWY-S5-qHG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LDH-Ns-Q4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ComeLottery" id="9tD-gl-4dx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6r2-d5-Tgb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZa-3v-HW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="-98"/>
+            <point key="canvasLocation" x="2106" y="-182"/>
         </scene>
     </scenes>
     <resources>
