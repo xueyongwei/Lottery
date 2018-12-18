@@ -244,6 +244,7 @@ extension HomeFeedCollectionViewController{
         Service.Lottery.index(sucess: { (response) in
             self.collectionView.mj_header.endRefreshing()
             guard response.status == 1 else {
+                MBProgressHUD.showFailImage(response.message)
                 return
             }
             guard let datas = response.data.array else {
@@ -274,12 +275,18 @@ extension HomeFeedCollectionViewController{
     /// 获取分组的信息
     func infoOf(section:Int) -> (dataCount:Int,headerHeight:CGFloat,footerHeight:CGFloat,sectionInset:UIEdgeInsets,itemSize:CGSize){
         let type = self.dataSource[section]
+        
+        var sectionHeight:CGFloat = 0
+        
         switch  type{
         case .topBarner:
             let height = (321.0/720.0 )*YYScreenSize().width
             return (0,height,0,UIEdgeInsets.zero,CGSize.zero)
         case .notiInfo:
-            return (0,42.0,9.0,UIEdgeInsets.zero,CGSize.zero)
+            if self.notiInfo.count > 0 {
+                sectionHeight = 42.0
+            }
+            return (0,sectionHeight,9.0,UIEdgeInsets.zero,CGSize.zero)
         case .funcItem:
             let sectionInset = UIEdgeInsets.init(top: 18, left: 18, bottom: 18, right: 18)
             
@@ -287,14 +294,24 @@ extension HomeFeedCollectionViewController{
             let size = CGSize.init(width: widht, height: 62)
             return (funcItemSource.count,0,0,sectionInset,size)
         case .hotCategory:
+            if self.hotLotterySource.count > 0 {
+                sectionHeight = 56
+            }
             let sectionInset = UIEdgeInsets.init(top: 0, left: 14, bottom: 12, right: 14)
             let width = (self.collectionView.width - sectionInset.left - sectionInset.right-3)*0.5
             let height = (100.0 / 173.0) * width
-            return (self.hotLotterySource.count,56,9,sectionInset,CGSize.init(width: width, height: height))
+            
+            return (self.hotLotterySource.count,sectionHeight,9,sectionInset,CGSize.init(width: width, height: height))
         case .centerBigImg:
-            return (0,91,9,UIEdgeInsets.zero,CGSize.zero)
+            if let itm = self.bigImgItm,itm.imageUrl.count > 0 {
+                sectionHeight = 91
+            }
+            return (0,sectionHeight,9,UIEdgeInsets.zero,CGSize.zero)
         case .lotterys:
-            return (0,250,0,UIEdgeInsets.zero,CGSize.zero)
+            if self.lotterycategorScource.count > 0 {
+                sectionHeight = 250
+            }
+            return (0,sectionHeight,0,UIEdgeInsets.zero,CGSize.zero)
 //            return (lotterycategorScource.count,62,0,UIEdgeInsets.zero,CGSize.init(width: 100, height: 100))
         }
     }

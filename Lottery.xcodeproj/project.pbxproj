@@ -38,6 +38,8 @@
 		4727CD8021C7886B00AAFDB7 /* LotteryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */; };
 		4727CD8221C79C6C00AAFDB7 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8121C79C6C00AAFDB7 /* Lottery.swift */; };
 		4727CD8621C7B30D00AAFDB7 /* PushSchemeOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */; };
+		475A923F21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475A923E21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard */; };
+		475A924121C8F997007E77B4 /* ComeLotteryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A924021C8F997007E77B4 /* ComeLotteryTableViewController.swift */; };
 		4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */ = {isa = PBXBuildFile; fileRef = 4781AC8721C3889F00E3DD54 /* SSCai.json */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
@@ -104,6 +106,8 @@
 		4727CD7F21C7886B00AAFDB7 /* LotteryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCollectionViewController.swift; sourceTree = "<group>"; };
 		4727CD8121C79C6C00AAFDB7 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
 		4727CD8521C7B30D00AAFDB7 /* PushSchemeOpenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSchemeOpenable.swift; sourceTree = "<group>"; };
+		475A923E21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComeLotteryStoryboard.storyboard; sourceTree = "<group>"; };
+		475A924021C8F997007E77B4 /* ComeLotteryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeLotteryTableViewController.swift; sourceTree = "<group>"; };
 		4781AC8721C3889F00E3DD54 /* SSCai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SSCai.json; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
 		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				0DD30C8721C15358008AECFA /* ComeLotteryViewController.swift */,
+				475A924021C8F997007E77B4 /* ComeLotteryTableViewController.swift */,
+				475A923E21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard */,
 			);
 			path = "开奖";
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				47C0192621C257F6003DA90A /* Home.storyboard in Resources */,
 				47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */,
 				0DD30C7021BEA851008AECFA /* FFSSCS.storyboard in Resources */,
+				475A923F21C8F7A9007E77B4 /* ComeLotteryStoryboard.storyboard in Resources */,
 				4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +653,7 @@
 				0DD30C9921C523EF008AECFA /* JXMarqueeView.swift in Sources */,
 				0DD30C9221C4D288008AECFA /* APICenter.swift in Sources */,
 				0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */,
+				475A924121C8F997007E77B4 /* ComeLotteryTableViewController.swift in Sources */,
 				4727CD7821C781BF00AAFDB7 /* BaseJXCategoryViewController.m in Sources */,
 				0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */,
 				0DD30C6E21BEA82D008AECFA /* FFsscViewController.swift in Sources */,
