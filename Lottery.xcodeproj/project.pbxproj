@@ -419,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				47E8350021BE376B00B4B6F8 /* Lottery */,
+				47BB6E6B21C0E5BC00E71BAE /* Support */,
 				47E834FF21BE376B00B4B6F8 /* Products */,
 				1675C97C53CBFE554634BAF4 /* Pods */,
 				1BECFC1CC9288976373249FF /* Frameworks */,
@@ -436,10 +437,9 @@
 		47E8350021BE376B00B4B6F8 /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
-				0DD30C7F21C15219008AECFA /* Classes */,
-				47BB6E6B21C0E5BC00E71BAE /* Support */,
 				47BB6E6121C0BCCF00E71BAE /* Common */,
 				0DD30C5F21BE9E7F008AECFA /* Utils */,
+				0DD30C7F21C15219008AECFA /* Classes */,
 				47E8350121BE376B00B4B6F8 /* AppDelegate.swift */,
 				47E8350321BE376B00B4B6F8 /* ViewController.swift */,
 				0DD30C7C21C150FA008AECFA /* RootViewController.swift */,
