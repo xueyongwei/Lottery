@@ -21,8 +21,6 @@ class Service: NSObject {
             switch self {
             case .responseFormatterError:
                 return "server的数据格式不正确"
-            default:
-                return "未知错误"
             }
         }
     }
@@ -31,19 +29,6 @@ class Service: NSObject {
         var data:JSON
         var status:Int
         var message:String
-        
-//        /// 从JSON得到一个Response对象
-//        static func with(alamJSON:Any) ->Response?{
-//            if let dict = alamJSON as? Dictionary<String, Any>,
-//                let data = dict["data"],
-//                let status = dict["status"] as? Int{
-//                let message = dict["message"] as? String ?? " "
-//                let response = Response.init(data: data, status: status, message: message)
-//                return response
-//            }
-//            XYWDebugLog("格式不正确:\(alamJSON)", type: .error)
-//            return nil
-//        }
     }
     
 }
@@ -52,17 +37,7 @@ extension Service{
         
         static func index(sucess:@escaping SucessBlock,failure: FailureBlock?){
             let url = APICenter.Lottery.index()
-            //            Alamofire.request(url).responseData { (data) in
-            //                switch data.result{
-            //                case .success(let value):
-            //                     JSONDecoder().decode(Response, from: value)
-            //                    break
-            //                case .failure(let error):
-            //                    break
-            //                }
-            //            }
-            
-            Alamofire.request(url).responseJSON { (response) in
+            Service.request(url, parameters: nil).responseJSON { (response) in
                 switch response.result{
                 case .success(let value):
                     let json = JSON(value)
@@ -77,13 +52,74 @@ extension Service{
                     failure?(error)
                     break
                 }
+                
             }
         }
         
-        
     }
+    
     
 }
 
 
+
+
+
+extension Service {
+    
+    @discardableResult
+    public static func request(_ url: URLConvertible,parameters: Parameters? = nil) -> DataRequest
+    {
+        let headers:HTTPHeaders? = nil
+        return SessionManager.default.request(
+            url,
+            method: .post,
+            parameters: parameters,
+            encoding: URLEncoding.default,
+            headers: headers
+        )
+    }
+    
+    /// 登录成功后更新本地的cookie
+    static func updateCookies(response:DataResponse<Any>){
+        let headerFields = response.response?.allHeaderFields as! [String: String]
+        let url = response.request?.url
+        let cookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url!)
+        var cookieArray = [ [HTTPCookiePropertyKey : Any ] ]()
+        for cookie in cookies {
+            cookieArray.append(cookie.properties!)
+        }
+        UserDefaults.standard.set(cookieArray, forKey: "server_tokens")
+    }
+    
+    /// 恢复cookies
+    static func restoreCookies(){
+        
+        addTestCookie()
+        
+        if let cookieArray = UserDefaults.standard.array(forKey: "server_tokens") {
+            for cookieData in cookieArray {
+                if let dict = cookieData as? [HTTPCookiePropertyKey : Any] {
+                    if let cookie = HTTPCookie.init(properties : dict) {
+                        HTTPCookieStorage.shared.setCookie(cookie)
+                    }
+                }
+            }
+        }
+    }
+    
+    static func addTestCookie(){
+        
+        var cookieProperties = [HTTPCookiePropertyKey: String]()
+        cookieProperties[HTTPCookiePropertyKey.name] = "testToken" as String
+        cookieProperties[HTTPCookiePropertyKey.value] = "XueYongWei" as String
+        cookieProperties[HTTPCookiePropertyKey.domain] = "123.59.124.153" as String
+        cookieProperties[HTTPCookiePropertyKey.path] = "/" as String
+        
+        let cookie = HTTPCookie(properties: cookieProperties)
+        HTTPCookieStorage.shared.setCookie(cookie!)
+        
+    }
+    
+}
 
