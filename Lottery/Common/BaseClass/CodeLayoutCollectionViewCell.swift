@@ -23,3 +23,20 @@ class CodeLayoutCollectionViewCell: UICollectionViewCell ,ViewCodeLayoutable{
         codeCustomSubviews()
     }
 }
+
+class CodeLayoutTableViewCell:UITableViewCell,ViewCodeLayoutable{
+    func codeCustomSubviews() {
+        XYWDebugLog("CodeLayoutView派生类应该遵循ViewCodeLayoutable协议", type: .error)
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        codeCustomSubviews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        codeCustomSubviews()
+    }
+    
+}
