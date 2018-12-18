@@ -32,28 +32,20 @@ class Service: NSObject {
     }
     
 }
+//MARK: - --------------Lottery--------------
 extension Service{
     struct Lottery {
         
+        /// 获取主彩种
+        static func getLotteryCategory(sucess:@escaping SucessBlock,failure: FailureBlock?){
+            let url = APICenter.Lottery.getLotterycCategory()
+            Service.request(url).serverResponse(sucess: sucess, failure: failure)
+        }
+        
+        /// 获取首页数据
         static func index(sucess:@escaping SucessBlock,failure: FailureBlock?){
             let url = APICenter.Lottery.index()
-            Service.request(url, parameters: nil).responseJSON { (response) in
-                switch response.result{
-                case .success(let value):
-                    let json = JSON(value)
-                    let status = json["status"].intValue
-                    let message = json["message"].stringValue
-                    let data = json["data"]
-                    let response = Response.init(data: data, status: status, message: message)
-                    sucess(response)
-                    break
-                case .failure(let error):
-                    
-                    failure?(error)
-                    break
-                }
-                
-            }
+            Service.request(url).serverResponse(sucess: sucess, failure: failure)
         }
         
     }
@@ -61,10 +53,32 @@ extension Service{
     
 }
 
+//MARK: - --------------DataRequest--------------
+extension DataRequest {
+    /// 服务端的回应
+    @discardableResult
+    func serverResponse(sucess:@escaping Service.SucessBlock,failure: Service.FailureBlock?) -> Self {
+        
+       let res = responseJSON { (response) in
+            switch response.result{
+            case .success(let value):
+                let json = JSON(value)
+                let status = json["status"].intValue
+                let message = json["message"].stringValue
+                let data = json["data"]
+                let response = Service.Response.init(data: data, status: status, message: message)
+                sucess(response)
+                break
+            case .failure(let error):
+                failure?(error)
+                break
+            }
+        }
+        return res
+    }
+}
 
-
-
-
+//MARK: - --------------Service Cookie Request--------------
 extension Service {
     
     @discardableResult
@@ -94,9 +108,7 @@ extension Service {
     
     /// 恢复cookies
     static func restoreCookies(){
-        
         addTestCookie()
-        
         if let cookieArray = UserDefaults.standard.array(forKey: "server_tokens") {
             for cookieData in cookieArray {
                 if let dict = cookieData as? [HTTPCookiePropertyKey : Any] {
@@ -107,18 +119,15 @@ extension Service {
             }
         }
     }
-    
-    static func addTestCookie(){
-        
+    /// 添加一个测试的cookie
+    private static func addTestCookie(){
         var cookieProperties = [HTTPCookiePropertyKey: String]()
         cookieProperties[HTTPCookiePropertyKey.name] = "testToken" as String
         cookieProperties[HTTPCookiePropertyKey.value] = "XueYongWei" as String
         cookieProperties[HTTPCookiePropertyKey.domain] = "123.59.124.153" as String
         cookieProperties[HTTPCookiePropertyKey.path] = "/" as String
-        
         let cookie = HTTPCookie(properties: cookieProperties)
         HTTPCookieStorage.shared.setCookie(cookie!)
-        
     }
     
 }
