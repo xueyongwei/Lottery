@@ -11,7 +11,7 @@ import UIKit
 class ComeLotteryTableViewController: UITableViewController {
 
     
-    var LotteryListVoSource = [LotteryListVo]()
+    var LotteryComeSource = [LotteryCome]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,14 @@ class ComeLotteryTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         self.tableView.register(BaseComeLotteryCell.self, forCellReuseIdentifier: "BaseComeLotteryCell")
+        self.tableView.register(ComeRedBullNumberCollectionCell.self, forCellReuseIdentifier: "ComeRedBullNumberCollectionCell")
+        self.tableView.register(ComePK10CollectionCell.self, forCellReuseIdentifier: "ComePK10CollectionCell")
+        self.tableView.register(Come11xuan5CollectionCell.self, forCellReuseIdentifier: "Come11xuan5CollectionCell")
+        self.tableView.register(ComeKuaisanCollectionCell.self, forCellReuseIdentifier: "ComeKuaisanCollectionCell")
+        self.tableView.register(Come6hecaiCollectionCell.self, forCellReuseIdentifier: "Come6hecaiCollectionCell")
+        self.tableView.register(ComePcdandanCollectionCell.self, forCellReuseIdentifier: "ComePcdandanCollectionCell")
+        self.tableView.register(ComeAdd3Equal1CollectionCell.self, forCellReuseIdentifier: "ComeAdd3Equal1CollectionCell")
+        
         self.tableView.tableFooterView = UIView()
         
         let header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(requestData))
@@ -38,38 +46,21 @@ class ComeLotteryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.LotteryListVoSource.count
+        return self.LotteryComeSource.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var reuseIdentifier = "BaseComeLotteryCell"
-        let model = self.LotteryListVoSource[indexPath.row]
-        var cell = BaseComeLotteryCell.init(style: .default, reuseIdentifier: "BaseComeLotteryCell")
-        if let category = LotteryCategory.init(rawValue: model.categoryId) {//特别定制
-            switch category {
-            case .ssc:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
-                return cell
-            case .kuai3:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
-                return cell
-            default:
-                break
-            }
-            cell = tableView.dequeueReusableCell(withIdentifier: "ComeSscCollectionCell", for: indexPath) as! ComeSscCollectionCell
-        }
+        let reuseIdentifier = self.reuseIdentifierOf(indexPath: indexPath)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath) as! BaseComeLotteryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! BaseComeLotteryCell
+        
+        let model = self.LotteryComeSource[indexPath.row]
         cell.titleLabel.text = model.name
         cell.timeLabel.text = model.lastPrizeTime.description
         cell.iconImgView.sd_setImage(with: URL.init(string: model.imageUrl), placeholderImage: UIImage.init(named: "palceholder"))
         cell.descLabel.text = model.lastIssueNo
-        
-        guard let category = LotteryCategory.init(rawValue: model.categoryId) else {
-            return cell
-        }
-        
+        cell.lastPrizeNumber = model.lastPrizeNumber
         
         return cell
     }
@@ -89,18 +80,18 @@ extension ComeLotteryTableViewController{
         Service.Lottery.getLotteryCategory(sucess: {[weak self] (response) in
             
             self?.tableView.mj_header.endRefreshing()
-            self?.LotteryListVoSource.removeAll()
+            self?.LotteryComeSource.removeAll()
             if response.status == 1 {
                 let datas = response.data.arrayValue
                 for itm in datas{
-                    let model = LotteryListVo.init(categoryId: itm["categoryId"].intValue,
+                    let model = LotteryCome.init(categoryId: itm["categoryId"].intValue,
                                                    imageUrl: itm["imageUrl"].stringValue,
                                                    lastIssueNo: itm["lastIssueNo"].stringValue,
                                                    lastPrizeNumber: itm["lastPrizeNumber"].stringValue,
                                                    name: itm["name"].stringValue,
                                                    lastPrizeTime: itm["lastPrizeTime"].intValue,
                                                    lotteryId: itm["lotteryId"].intValue)
-                    self?.LotteryListVoSource.append(model)
+                    self?.LotteryComeSource.append(model)
                 }
                 self?.tableView.reloadData()
             }else{
@@ -113,40 +104,53 @@ extension ComeLotteryTableViewController{
 }
 //MARK: - --------------辅助方法--------------
 extension ComeLotteryTableViewController{
-    func reuseIdentifierOfategory(category:LotteryCategory)->String{
-        switch category {
-        case .ssc:
-            return "ComeSscCollectionCell"
-        case .fenfen28:
-            return "ComeFenfen28CollectionCell"
-        case .kuai3:
-            return "ComeKuaisanCollectionCell"
-        case .liuhecai:
-            return "Come6hecaiCollectionCell"
-        case .pcdandan:
-            return "ComePcdandanCollectionCell"
-        case .pk10:
-            return "ComePK10CollectionCell"
-        case .shiyixuan5:
-            return "Come11xuan5CollectionCell"
-       
+    /// 获取重用符
+    func reuseIdentifierOf(indexPath:IndexPath)->String{
+        let model = self.LotteryComeSource[indexPath.row]
+        if let category = LotteryCategory.init(rawValue: model.categoryId) {//特别定制
+            switch category {
+            case .ssc,.pk10,.shiyixuan5:
+                return "ComeRedBullNumberCollectionCell"
+            case .fenfen28:
+                return "ComeAdd3Equal1CollectionCell"
+            case .kuai3:
+                return "ComeKuaisanCollectionCell"
+            case .liuhecai:
+                return "Come6hecaiCollectionCell"
+            case .pcdandan:
+                return "ComePcdandanCollectionCell"
+            }
+        }else{
+            return "BaseComeLotteryCell"
         }
+        
     }
-    func config(cell:UITableViewCell,at indexPath:IndexPath){
-        let model = self.LotteryListVoSource[indexPath.row]
-        guard let category = LotteryCategory.init(rawValue: model.categoryId) else {
-            return
+    /// 定制cell的内容
+    func config(cell:BaseComeLotteryCell,at indexPath:IndexPath){
+        let model = self.LotteryComeSource[indexPath.row]
+        if let category = LotteryCategory.init(rawValue: model.categoryId) {//特别定制
+//            switch category {
+//            case .ssc,.pk10,.shiyixuan5:
+//                let theCell = cell as! ComeRedBullNumberCollectionCell
+//
+////                return "ComeRedBullNumberCollectionCell"
+//            case .fenfen28:
+////                return "ComeFenfen28CollectionCell"
+//            case .kuai3:
+////                return "ComeKuaisanCollectionCell"
+//            case .liuhecai:
+////                return "Come6hecaiCollectionCell"
+//            case .pcdandan:
+////                return "ComePcdandanCollectionCell"
+//            }
         }
-        switch category {
-        case .ssc:
-            break
-        default:
-            break
-        }
+        
+        
     }
 }
+
 extension ComeLotteryTableViewController{
-    struct LotteryListVo {
+    struct LotteryCome {
         var categoryId: Int
         var imageUrl: String
         var lastIssueNo: String

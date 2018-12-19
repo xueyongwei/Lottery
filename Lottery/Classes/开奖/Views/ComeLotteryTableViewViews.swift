@@ -11,6 +11,26 @@ import Foundation
 //MARK: - --------------类中类--------------
 extension ComeLotteryTableViewController{
     class BaseComeLotteryCell:CodeLayoutTableViewCell{
+        /// 上期开奖数据
+        var lastPrizeNumber: String = ""{
+            didSet{
+                let numbers:[String] = lastPrizeNumber.components(separatedBy: ",")
+                XYWDebugLog(numbers, type: .info)
+                updateUIWith(datas: numbers)
+            }
+        }
+        
+        func updateUIWith(datas:[String]){
+            
+        }
+        /// 添加一个气泡button
+        fileprivate func resultViewAddBubbleBtn(frame:CGRect,tag:Int){
+            let btn = UIButton.bubbleBtn(frame: frame)
+            btn.isUserInteractionEnabled = false
+            btn.tag = tag
+            resultView.addSubview(btn)
+        }
+        
         lazy var titleLabel: UILabel = {
             let label = UILabel()
             label.text = "这里是标题"
@@ -46,7 +66,8 @@ extension ComeLotteryTableViewController{
         override func codeCustomSubviews() {
             contentView.addSubview(iconImgView)
             iconImgView.snp.makeConstraints { (make) in
-                make.centerY.equalToSuperview()
+//                make.centerY.equalToSuperview()
+                make.top.equalToSuperview().offset(10)
                 make.left.equalToSuperview().offset(18)
                 make.width.height.equalTo(50)
             }
@@ -84,39 +105,90 @@ extension ComeLotteryTableViewController{
         
     }
     
-    class ComeSscCollectionCell:BaseComeLotteryCell{
-        var numbers = [Int]()
+    /// 时时彩
+    class ComeRedBullNumberCollectionCell:BaseComeLotteryCell{
+        
+        override func updateUIWith(datas: [String]) {
+            for i in 0..<10 {
+                let btn = self.resultView.viewWithTag(100 + i) as! UIButton
+                if i < datas.count - 1{
+                    btn.isHidden = false
+                    btn.setTitle(datas[i], for: .normal)
+                }else{
+                    btn.isHidden = true
+                }
+            }
+        }
         
         override func codeCustomSubviews() {
             super.codeCustomSubviews()
-            for i in 0..<5{
-                let btn = UIButton.init(type: .custom)
-                btn.setTitle("\(i)", for: .normal)
-                btn.frame = CGRect.init(x: 30 * i, y: 0, width: 30, height: 30)
+            for i in 0..<10{
+                let frame = CGRect.init(x: 25 * i, y: 0, width: 20, height: 20)
+                
+                let btn = UIButton.bubbleBtn(frame: frame)
+                btn.tag = 100 + i
+                btn.isUserInteractionEnabled = false
                 resultView.addSubview(btn)
-                btn.layer.cornerRadius = 15
-                btn.clipsToBounds = true
             }
         }
+        
     }
-    
+    /// PK10
     class ComePK10CollectionCell:BaseComeLotteryCell{
         
     }
+    /// 11选5
     class Come11xuan5CollectionCell:BaseComeLotteryCell{
         
     }
+    /// 快3
     class ComeKuaisanCollectionCell:BaseComeLotteryCell{
         
     }
+    /// 六合彩
     class Come6hecaiCollectionCell:BaseComeLotteryCell{
         
     }
+    /// PC蛋蛋
     class ComePcdandanCollectionCell:BaseComeLotteryCell{
         
     }
-    class ComeFenfen28CollectionCell:BaseComeLotteryCell{
-        
+    /// 分分28
+    class ComeAdd3Equal1CollectionCell:BaseComeLotteryCell{
+        override func updateUIWith(datas: [String]) {
+            for i in 0..<datas.count{
+                let data = datas[i]
+                let btn = self.resultView.viewWithTag(100 + i) as! UIButton
+                btn.setTitle(data, for: .normal)
+            }
+        }
+        override func codeCustomSubviews() {
+            super.codeCustomSubviews()
+            var frame = CGRect.init(x: 0, y: 0, width: 20, height: 20)
+            
+            resultViewAddBubbleBtn(frame: frame, tag: 100)
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            
+            resultView.addSubview(UILabel.opreateLabel(frame: frame, text: "+"))
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            resultViewAddBubbleBtn(frame: frame, tag: 101)
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            
+            resultView.addSubview(UILabel.opreateLabel(frame: frame, text: "+"))
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            resultViewAddBubbleBtn(frame: frame, tag: 102)
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            
+            resultView.addSubview(UILabel.opreateLabel(frame: frame, text: "="))
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            resultViewAddBubbleBtn(frame: frame, tag: 103)
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            
+        }
     }
+    
+    
 }
+
+
 

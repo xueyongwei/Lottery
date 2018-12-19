@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D8244D621C93002008CC823 /* ComeLotteryTableViewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */; };
+		0D8244D921CA933A008CC823 /* BubbleNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244D821CA933A008CC823 /* BubbleNumberView.swift */; };
 		0DD30C6721BE9EEC008AECFA /* MathTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6621BE9EEC008AECFA /* MathTool.swift */; };
 		0DD30C6921BEA4A5008AECFA /* CalculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6821BEA4A5008AECFA /* CalculateTool.swift */; };
 		0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6A21BEA605008AECFA /* HallCollectionViewController.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeLotteryTableViewViews.swift; sourceTree = "<group>"; };
+		0D8244D821CA933A008CC823 /* BubbleNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleNumberView.swift; sourceTree = "<group>"; };
 		0DD30C6221BE9EB3008AECFA /* Lottery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lottery-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DD30C6621BE9EEC008AECFA /* MathTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTool.swift; sourceTree = "<group>"; };
 		0DD30C6821BEA4A5008AECFA /* CalculateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTool.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				4727CD6F21C7734D00AAFDB7 /* MBProgressHUD+Utility.h */,
 				4727CD6E21C7734D00AAFDB7 /* MBProgressHUD+Utility.m */,
 				47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */,
+				0D8244D821CA933A008CC823 /* BubbleNumberView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DD30C8221C15260008AECFA /* HomeViewController.swift in Sources */,
+				0D8244D921CA933A008CC823 /* BubbleNumberView.swift in Sources */,
 				0DD30C8A21C1541C008AECFA /* HomeFeedCollectionViewController.swift in Sources */,
 				4727CD7021C7734D00AAFDB7 /* MBProgressHUD+Utility.m in Sources */,
 				0DD30C8621C152F6008AECFA /* MineViewController.swift in Sources */,

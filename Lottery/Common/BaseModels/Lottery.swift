@@ -12,8 +12,8 @@ enum LotteryCategory: Int {
     case ssc = 1
     case kuai3 = 2
     case shiyixuan5 = 3
-    case pk10 = 4
-    case pcdandan = 5
+    case pcdandan = 4
+    case pk10 = 5
     case fenfen28 = 6
     case liuhecai = 7
 }
