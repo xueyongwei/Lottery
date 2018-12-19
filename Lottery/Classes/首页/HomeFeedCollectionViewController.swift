@@ -264,7 +264,8 @@ extension HomeFeedCollectionViewController{
             }
             self.collectionView.reloadData()
         }) { (error) in
-            XYWDebugLog("出错了\(error)", type: .error)
+            self.collectionView.mj_header.endRefreshing()
+            MBProgressHUD.showFailImage(error.localizedDescription)
         }
         
     }

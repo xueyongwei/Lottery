@@ -43,26 +43,33 @@ class ComeLotteryTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var reuseIdentifier = "BaseComeLotteryCell"
         let model = self.LotteryListVoSource[indexPath.row]
+        var cell = BaseComeLotteryCell.init(style: .default, reuseIdentifier: "BaseComeLotteryCell")
+        if let category = LotteryCategory.init(rawValue: model.categoryId) {//特别定制
+            switch category {
+            case .ssc:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
+                return cell
+            case .kuai3:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
+                return cell
+            default:
+                break
+            }
+            cell = tableView.dequeueReusableCell(withIdentifier: "ComeSscCollectionCell", for: indexPath) as! ComeSscCollectionCell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath) as! BaseComeLotteryCell
         cell.titleLabel.text = model.name
         cell.timeLabel.text = model.lastPrizeTime.description
         cell.iconImgView.sd_setImage(with: URL.init(string: model.imageUrl), placeholderImage: UIImage.init(named: "palceholder"))
         cell.descLabel.text = model.lastIssueNo
         
-//        guard let category = LotteryCategory.init(rawValue: model.categoryId) else {
-//            return cell
-//        }
-//        switch category {
-//        case .ssc:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
-//            return cell
-//        case .kuai3:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "BaseComeLotteryCell", for: indexPath)
-//            return cell
-//        default:
-//            break
-//        }
+        guard let category = LotteryCategory.init(rawValue: model.categoryId) else {
+            return cell
+        }
+        
         
         return cell
     }
@@ -71,6 +78,10 @@ class ComeLotteryTableViewController: UITableViewController {
         return 100
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
 }
 //MARK: - --------------数据请求--------------
 extension ComeLotteryTableViewController{
@@ -102,7 +113,25 @@ extension ComeLotteryTableViewController{
 }
 //MARK: - --------------辅助方法--------------
 extension ComeLotteryTableViewController{
-    
+    func reuseIdentifierOfategory(category:LotteryCategory)->String{
+        switch category {
+        case .ssc:
+            return "ComeSscCollectionCell"
+        case .fenfen28:
+            return "ComeFenfen28CollectionCell"
+        case .kuai3:
+            return "ComeKuaisanCollectionCell"
+        case .liuhecai:
+            return "Come6hecaiCollectionCell"
+        case .pcdandan:
+            return "ComePcdandanCollectionCell"
+        case .pk10:
+            return "ComePK10CollectionCell"
+        case .shiyixuan5:
+            return "Come11xuan5CollectionCell"
+       
+        }
+    }
     func config(cell:UITableViewCell,at indexPath:IndexPath){
         let model = self.LotteryListVoSource[indexPath.row]
         guard let category = LotteryCategory.init(rawValue: model.categoryId) else {
