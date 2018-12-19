@@ -217,6 +217,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flu-TD-hw3">
+                                <rect key="frame" x="0.0" y="50" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQO-he-LuC" userLabel="contentView">
                                 <rect key="frame" x="0.0" y="50" width="375" height="100"/>
                                 <subviews>
@@ -272,8 +276,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Flu-TD-hw3" secondAttribute="bottom" id="4Pr-ha-WqE"/>
+                            <constraint firstAttribute="trailing" secondItem="Flu-TD-hw3" secondAttribute="trailing" id="8cd-wA-r9y"/>
                             <constraint firstItem="pQO-he-LuC" firstAttribute="leading" secondItem="N8t-Hh-O8r" secondAttribute="leading" id="A4f-zB-erd"/>
                             <constraint firstAttribute="trailing" secondItem="pQO-he-LuC" secondAttribute="trailing" id="Dfe-x3-OMT"/>
+                            <constraint firstItem="Flu-TD-hw3" firstAttribute="top" secondItem="pQO-he-LuC" secondAttribute="top" id="EqZ-Lq-R0P"/>
+                            <constraint firstItem="Flu-TD-hw3" firstAttribute="leading" secondItem="N8t-Hh-O8r" secondAttribute="leading" id="KUs-Ii-MB3"/>
                             <constraint firstItem="pQO-he-LuC" firstAttribute="bottom" secondItem="iUL-WU-MAT" secondAttribute="bottom" id="okq-Hw-Y40"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iUL-WU-MAT"/>
