@@ -23,8 +23,8 @@ class ComeLotteryTableViewController: UITableViewController {
         self.tableView.register(ComeRedBullNumberCollectionCell.self, forCellReuseIdentifier: "ComeRedBullNumberCollectionCell")
         self.tableView.register(ComePK10CollectionCell.self, forCellReuseIdentifier: "ComePK10CollectionCell")
         self.tableView.register(Come11xuan5CollectionCell.self, forCellReuseIdentifier: "Come11xuan5CollectionCell")
-        self.tableView.register(ComeKuaisanCollectionCell.self, forCellReuseIdentifier: "ComeKuaisanCollectionCell")
-        self.tableView.register(Come6hecaiCollectionCell.self, forCellReuseIdentifier: "Come6hecaiCollectionCell")
+        self.tableView.register(ComeTouziSumCollectionCell.self, forCellReuseIdentifier: "ComeKuaisanCollectionCell")
+        self.tableView.register(Come6add1CollectionCell.self, forCellReuseIdentifier: "Come6add1CollectionCell")
         self.tableView.register(ComePcdandanCollectionCell.self, forCellReuseIdentifier: "ComePcdandanCollectionCell")
         self.tableView.register(ComeAdd3Equal1CollectionCell.self, forCellReuseIdentifier: "ComeAdd3Equal1CollectionCell")
         
@@ -116,7 +116,7 @@ extension ComeLotteryTableViewController{
             case .kuai3:
                 return "ComeKuaisanCollectionCell"
             case .liuhecai:
-                return "Come6hecaiCollectionCell"
+                return "Come6add1CollectionCell"
             case .pcdandan:
                 return "ComePcdandanCollectionCell"
             }

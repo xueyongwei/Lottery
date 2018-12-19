@@ -142,18 +142,76 @@ extension ComeLotteryTableViewController{
         
     }
     /// 快3
-    class ComeKuaisanCollectionCell:BaseComeLotteryCell{
-        
+    class ComeTouziSumCollectionCell:BaseComeLotteryCell{
+        lazy var sumLabel: UILabel = {
+            let label = UILabel()
+            label.textAlignment = .left
+            label.font = UIFont.systemFont(ofSize: 13)
+            label.textColor = UIColor.lightGray
+            return label
+        }()
+        override func updateUIWith(datas: [String]) {
+            for i in 0..<datas.count{
+                let data = datas[i]
+                let imgv = self.resultView.viewWithTag(100 + i) as! UIImageView
+                imgv.image = UIImage.init(named: "touzi\(data)")
+            }
+            let sum = datas.reduce(0) { (res, numStr)  in
+                let num = Int(numStr) ?? 0
+                return res + num
+            }
+            
+            sumLabel.text = "和值:\(sum)"
+        }
+        override func codeCustomSubviews() {
+            super.codeCustomSubviews()
+            var frame = CGRect.zero
+            
+            for i in 0..<3{
+                frame = CGRect.init(x: 25 * i, y: 0, width: 20, height: 20)
+                let imageView = UIImageView.init(frame: frame)
+                imageView.contentMode = .scaleAspectFit
+                imageView.tag = 100 + i
+                resultView.addSubview(imageView)
+            }
+            frame = frame.offsetBy(dx: 30, dy: 0)
+            frame.size = CGSize.init(width: 150, height: 20)
+            self.sumLabel.frame = frame
+            resultView.addSubview(sumLabel)
+            
+        }
     }
-    /// 六合彩
-    class Come6hecaiCollectionCell:BaseComeLotteryCell{
-        
+    /// 六个加一个
+    class Come6add1CollectionCell:BaseComeLotteryCell{
+        override func updateUIWith(datas: [String]) {
+            for i in 0..<datas.count{
+                let data = datas[i]
+                let btn = self.resultView.viewWithTag(100 + i) as! UIButton
+                btn.setTitle(data, for: .normal)
+            }
+        }
+        override func codeCustomSubviews() {
+            super.codeCustomSubviews()
+            var frame = CGRect.zero
+            for i in 0..<6{
+                frame = CGRect.init(x: 25 * i, y: 0, width: 20, height: 20)
+                let btn = UIButton.bubbleBtn(frame: frame)
+                btn.tag = 100 + i
+                btn.isUserInteractionEnabled = false
+                resultView.addSubview(btn)
+            }
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            resultView.addSubview(UILabel.opreateLabel(frame: frame, text: "="))
+            frame = frame.offsetBy(dx: 20, dy: 0)
+            resultViewAddBubbleBtn(frame: frame, tag: 106)
+            
+        }
     }
     /// PC蛋蛋
     class ComePcdandanCollectionCell:BaseComeLotteryCell{
         
     }
-    /// 分分28
+    /// 三个加一个等于一个
     class ComeAdd3Equal1CollectionCell:BaseComeLotteryCell{
         override func updateUIWith(datas: [String]) {
             for i in 0..<datas.count{
