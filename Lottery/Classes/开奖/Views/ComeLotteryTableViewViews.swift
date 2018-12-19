@@ -91,10 +91,15 @@ extension ComeLotteryTableViewController{
             super.codeCustomSubviews()
             for i in 0..<5{
                 let btn = UIButton.init(type: .custom)
-                
+                btn.setTitle("\(i)", for: .normal)
+                btn.frame = CGRect.init(x: 30 * i, y: 0, width: 30, height: 30)
+                resultView.addSubview(btn)
+                btn.layer.cornerRadius = 15
+                btn.clipsToBounds = true
             }
         }
     }
+    
     class ComePK10CollectionCell:BaseComeLotteryCell{
         
     }
@@ -108,6 +113,9 @@ extension ComeLotteryTableViewController{
         
     }
     class ComePcdandanCollectionCell:BaseComeLotteryCell{
+        
+    }
+    class ComeFenfen28CollectionCell:BaseComeLotteryCell{
         
     }
 }
