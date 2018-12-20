@@ -60,22 +60,6 @@
             </objects>
             <point key="canvasLocation" x="2016" y="597"/>
         </scene>
-        <!--Mine View Controller-->
-        <scene sceneID="bd6-jj-TqF">
-            <objects>
-                <viewController id="xmP-cn-4Ut" customClass="MineViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xek-SL-4Hy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="5AK-GZ-5ug"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="n6T-vT-Ffj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qaK-Eq-jIH" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2020" y="1774"/>
-        </scene>
         <!--我的-->
         <scene sceneID="3Tk-Do-kjt">
             <objects>
@@ -88,12 +72,22 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xmP-cn-4Ut" kind="relationship" relationship="rootViewController" id="mob-kZ-oZt"/>
+                        <segue destination="23q-pK-pLX" kind="relationship" relationship="rootViewController" id="1kF-jE-n3A"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR7-4T-2Yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="1774"/>
+        </scene>
+        <!--Mine-->
+        <scene sceneID="3Xm-tc-jbR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mine" id="23q-pK-pLX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n9y-8i-i5z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CzZ-Pm-DQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="1700"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="3Dh-aX-b8y">
