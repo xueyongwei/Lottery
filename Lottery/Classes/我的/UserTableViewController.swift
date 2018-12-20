@@ -10,6 +10,26 @@ import UIKit
 
 class UserTableViewController: UITableViewController {
 
+    @IBOutlet weak var userIconImgV: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userCodeLabel: UILabel!
+    
+    @IBOutlet weak var accountMoneyLabel: UILabel!
+    @IBOutlet weak var accountWithdrawableLabel: UILabel!
+    @IBOutlet weak var accountPointsLabel: UILabel!
+    
+    @IBAction func onCopyCodeClick(_ sender: UIButton) {
+        MBProgressHUD.showSuccessImage("拷贝成功！")
+        
+    }
+    @IBAction func onUserInfoClick(_ sender: UIButton) {
+        
+    }
+    @IBAction func tapAccountMoney(_ sender: UITapGestureRecognizer) {
+        MBProgressHUD.showWarningImage("余额")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

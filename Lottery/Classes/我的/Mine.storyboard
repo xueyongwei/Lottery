@@ -81,6 +81,9 @@
                                                     <rect key="frame" x="205" y="51.5" width="30" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="复制"/>
+                                                    <connections>
+                                                        <action selector="onCopyCodeClick:" destination="MSC-Dk-4Zl" eventType="touchUpInside" id="uDH-ni-0oF"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5Z-hh-YX5">
                                                     <rect key="frame" x="316" y="27" width="44" height="44"/>
@@ -89,6 +92,9 @@
                                                         <constraint firstAttribute="height" constant="44" id="Jm2-Ew-ZYj"/>
                                                     </constraints>
                                                     <state key="normal" title="&gt;"/>
+                                                    <connections>
+                                                        <action selector="onUserInfoClick:" destination="MSC-Dk-4Zl" eventType="touchUpInside" id="W31-nI-9Nw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -132,6 +138,7 @@
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="Fpg-d7-SAP" firstAttribute="top" secondItem="rbW-uA-9fr" secondAttribute="top" constant="10" id="CQ7-mc-QPb"/>
                                                                 <constraint firstItem="s1m-A8-cce" firstAttribute="leading" secondItem="rbW-uA-9fr" secondAttribute="leading" constant="5" id="IJu-Jl-2NB"/>
@@ -140,6 +147,9 @@
                                                                 <constraint firstAttribute="trailing" secondItem="s1m-A8-cce" secondAttribute="trailing" constant="5" id="kmq-Rx-mYO"/>
                                                                 <constraint firstAttribute="bottom" secondItem="s1m-A8-cce" secondAttribute="bottom" constant="10" id="oUq-uu-eqq"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="WAs-i9-DK5" appends="YES" id="B4d-fj-bz7"/>
+                                                            </connections>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-FS-bY4">
                                                             <rect key="frame" x="125" y="0.0" width="125" height="72.5"/>
@@ -232,6 +242,7 @@
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="X5c-IU-zBp" firstAttribute="centerY" secondItem="HrE-ud-j1e" secondAttribute="centerY" id="2XE-y7-SCE"/>
                                                                 <constraint firstItem="BhQ-Y4-sJE" firstAttribute="leading" secondItem="X5c-IU-zBp" secondAttribute="trailing" constant="10" id="2lU-AY-WcN"/>
@@ -537,8 +548,21 @@
                             <outlet property="delegate" destination="MSC-Dk-4Zl" id="dnO-A1-xFq"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="accountMoneyLabel" destination="Fpg-d7-SAP" id="3RA-OY-PZR"/>
+                        <outlet property="accountPointsLabel" destination="rxs-d5-i0p" id="Xba-Dg-ch5"/>
+                        <outlet property="accountWithdrawableLabel" destination="sqa-HR-3Gg" id="qZc-1g-o4g"/>
+                        <outlet property="userCodeLabel" destination="VkW-qC-buU" id="bIH-qN-uGK"/>
+                        <outlet property="userIconImgV" destination="4RI-DY-MaJ" id="hKu-5W-MUy"/>
+                        <outlet property="userNameLabel" destination="sra-Zw-H8a" id="Sbu-5c-sED"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFw-O4-8lC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WAs-i9-DK5">
+                    <connections>
+                        <action selector="tapAccountMoney:" destination="MSC-Dk-4Zl" id="Ngm-Du-SBQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1708" y="47.226386806596707"/>
         </scene>
