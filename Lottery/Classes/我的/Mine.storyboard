@@ -96,10 +96,21 @@
                                                         <action selector="onUserInfoClick:" destination="MSC-Dk-4Zl" eventType="touchUpInside" id="W31-nI-9Nw"/>
                                                     </connections>
                                                 </button>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请您先登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpA-Nh-hup">
+                                                    <rect key="frame" x="70" y="24" width="241" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4RI-DY-MaJ" firstAttribute="centerY" secondItem="yQt-pV-6Qc" secondAttribute="centerY" id="5xl-Vo-lHE"/>
+                                                <constraint firstItem="S5Z-hh-YX5" firstAttribute="leading" secondItem="hpA-Nh-hup" secondAttribute="trailing" constant="5" id="9Xi-Ui-njL"/>
                                                 <constraint firstItem="xij-gf-S7U" firstAttribute="centerY" secondItem="VkW-qC-buU" secondAttribute="centerY" id="EZf-yZ-SWc"/>
+                                                <constraint firstItem="hpA-Nh-hup" firstAttribute="top" secondItem="4RI-DY-MaJ" secondAttribute="top" id="G4z-ad-WMC"/>
+                                                <constraint firstItem="hpA-Nh-hup" firstAttribute="leading" secondItem="4RI-DY-MaJ" secondAttribute="trailing" constant="5" id="I7N-ec-cGA"/>
+                                                <constraint firstItem="hpA-Nh-hup" firstAttribute="bottom" secondItem="4RI-DY-MaJ" secondAttribute="bottom" id="PTl-d8-tNw"/>
                                                 <constraint firstItem="S5Z-hh-YX5" firstAttribute="centerY" secondItem="yQt-pV-6Qc" secondAttribute="centerY" id="R0h-Eu-7rj"/>
                                                 <constraint firstItem="sra-Zw-H8a" firstAttribute="leading" secondItem="4RI-DY-MaJ" secondAttribute="trailing" constant="8" id="WPf-7m-ten"/>
                                                 <constraint firstAttribute="trailing" secondItem="S5Z-hh-YX5" secondAttribute="trailing" constant="15" id="ezE-dj-nHk"/>
