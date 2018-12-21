@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0D8244D621C93002008CC823 /* ComeLotteryTableViewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */; };
 		0D8244D921CA933A008CC823 /* BubbleNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244D821CA933A008CC823 /* BubbleNumberView.swift */; };
+		0D8244DC21CBDDAD008CC823 /* BetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244DB21CBDDAD008CC823 /* BetListViewController.swift */; };
+		0D8244DE21CBDE5E008CC823 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244DD21CBDE5E008CC823 /* UserTableViewController.swift */; };
+		0D8244E021CBDE6A008CC823 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8244DF21CBDE6A008CC823 /* Mine.storyboard */; };
+		0D8244E321CBEDCB008CC823 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244E221CBEDCB008CC823 /* LoginTableViewController.swift */; };
+		0D8244E521CBEDDE008CC823 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244E421CBEDDE008CC823 /* RegisterTableViewController.swift */; };
+		0D8244E821CBEFCE008CC823 /* FindPwdCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244E721CBEFCE008CC823 /* FindPwdCodeTableViewController.swift */; };
+		0D8244EA21CBEFE5008CC823 /* FindPwdNewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8244E921CBEFE5008CC823 /* FindPwdNewTableViewController.swift */; };
 		0DD30C6721BE9EEC008AECFA /* MathTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6621BE9EEC008AECFA /* MathTool.swift */; };
 		0DD30C6921BEA4A5008AECFA /* CalculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6821BEA4A5008AECFA /* CalculateTool.swift */; };
 		0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD30C6A21BEA605008AECFA /* HallCollectionViewController.swift */; };
@@ -70,6 +77,13 @@
 /* Begin PBXFileReference section */
 		0D8244D521C93002008CC823 /* ComeLotteryTableViewViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeLotteryTableViewViews.swift; sourceTree = "<group>"; };
 		0D8244D821CA933A008CC823 /* BubbleNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleNumberView.swift; sourceTree = "<group>"; };
+		0D8244DB21CBDDAD008CC823 /* BetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetListViewController.swift; sourceTree = "<group>"; };
+		0D8244DD21CBDE5E008CC823 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		0D8244DF21CBDE6A008CC823 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		0D8244E221CBEDCB008CC823 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		0D8244E421CBEDDE008CC823 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
+		0D8244E721CBEFCE008CC823 /* FindPwdCodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdCodeTableViewController.swift; sourceTree = "<group>"; };
+		0D8244E921CBEFE5008CC823 /* FindPwdNewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdNewTableViewController.swift; sourceTree = "<group>"; };
 		0DD30C6221BE9EB3008AECFA /* Lottery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lottery-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DD30C6621BE9EEC008AECFA /* MathTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTool.swift; sourceTree = "<group>"; };
 		0DD30C6821BEA4A5008AECFA /* CalculateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTool.swift; sourceTree = "<group>"; };
@@ -167,6 +181,32 @@
 			path = BaseModels;
 			sourceTree = "<group>";
 		};
+		0D8244DA21CBDD39008CC823 /* 注单 */ = {
+			isa = PBXGroup;
+			children = (
+				0D8244DB21CBDDAD008CC823 /* BetListViewController.swift */,
+			);
+			path = "注单";
+			sourceTree = "<group>";
+		};
+		0D8244E121CBEDB6008CC823 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				0D8244E221CBEDCB008CC823 /* LoginTableViewController.swift */,
+				0D8244E421CBEDDE008CC823 /* RegisterTableViewController.swift */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		0D8244E621CBEF78008CC823 /* 找回修改密码 */ = {
+			isa = PBXGroup;
+			children = (
+				0D8244E721CBEFCE008CC823 /* FindPwdCodeTableViewController.swift */,
+				0D8244E921CBEFE5008CC823 /* FindPwdNewTableViewController.swift */,
+			);
+			path = "找回修改密码";
+			sourceTree = "<group>";
+		};
 		0DD30C5F21BE9E7F008AECFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +259,7 @@
 		0DD30C7F21C15219008AECFA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0D8244DA21CBDD39008CC823 /* 注单 */,
 				0DD30C8421C152E9008AECFA /* 我的 */,
 				0DD30C8321C152E2008AECFA /* 开奖 */,
 				0DD30C8021C1522A008AECFA /* 首页 */,
@@ -255,7 +296,11 @@
 		0DD30C8421C152E9008AECFA /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				0D8244E621CBEF78008CC823 /* 找回修改密码 */,
+				0D8244E121CBEDB6008CC823 /* 登录注册 */,
 				0DD30C8521C152F6008AECFA /* MineViewController.swift */,
+				0D8244DD21CBDE5E008CC823 /* UserTableViewController.swift */,
+				0D8244DF21CBDE6A008CC823 /* Mine.storyboard */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -544,6 +589,7 @@
 				47E8350C21BE376D00B4B6F8 /* LaunchScreen.storyboard in Resources */,
 				0DD30C7221BEA901008AECFA /* LotteryHall.storyboard in Resources */,
 				47E8350921BE376D00B4B6F8 /* Assets.xcassets in Resources */,
+				0D8244E021CBDE6A008CC823 /* Mine.storyboard in Resources */,
 				47C0192621C257F6003DA90A /* Home.storyboard in Resources */,
 				47E8350721BE376B00B4B6F8 /* Main.storyboard in Resources */,
 				0DD30C7021BEA851008AECFA /* FFSSCS.storyboard in Resources */,
@@ -655,8 +701,11 @@
 				0DD30C8221C15260008AECFA /* HomeViewController.swift in Sources */,
 				0D8244D921CA933A008CC823 /* BubbleNumberView.swift in Sources */,
 				0DD30C8A21C1541C008AECFA /* HomeFeedCollectionViewController.swift in Sources */,
+				0D8244E821CBEFCE008CC823 /* FindPwdCodeTableViewController.swift in Sources */,
 				4727CD7021C7734D00AAFDB7 /* MBProgressHUD+Utility.m in Sources */,
+				0D8244EA21CBEFE5008CC823 /* FindPwdNewTableViewController.swift in Sources */,
 				0DD30C8621C152F6008AECFA /* MineViewController.swift in Sources */,
+				0D8244E321CBEDCB008CC823 /* LoginTableViewController.swift in Sources */,
 				0DD30C9B21C53688008AECFA /* HomeFeedViews.swift in Sources */,
 				47C0192E21C25D00003DA90A /* CodeLayoutView.swift in Sources */,
 				4727CD8021C7886B00AAFDB7 /* LotteryCollectionViewController.swift in Sources */,
@@ -676,6 +725,7 @@
 				0DD30C6E21BEA82D008AECFA /* FFsscViewController.swift in Sources */,
 				0DD30C9F21C56BC7008AECFA /* LotteryListViewController.swift in Sources */,
 				47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */,
+				0D8244E521CBEDDE008CC823 /* RegisterTableViewController.swift in Sources */,
 				0DD30C6921BEA4A5008AECFA /* CalculateTool.swift in Sources */,
 				0DD30C7621BEAE5B008AECFA /* BuyTitleViewController.swift in Sources */,
 				47BB6E7021C0E65700E71BAE /* Preferences.swift in Sources */,
@@ -683,6 +733,7 @@
 				0DD30C6721BE9EEC008AECFA /* MathTool.swift in Sources */,
 				47BB6E6D21C0E5E300E71BAE /* UIGradientView.swift in Sources */,
 				0DD30C8D21C1590F008AECFA /* SSCai.swift in Sources */,
+				0D8244DE21CBDE5E008CC823 /* UserTableViewController.swift in Sources */,
 				47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */,
 				0DD30C7D21C150FA008AECFA /* RootViewController.swift in Sources */,
 				47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */,
@@ -700,6 +751,7 @@
 				0DD30C6B21BEA605008AECFA /* HallCollectionViewController.swift in Sources */,
 				4727CD8621C7B30D00AAFDB7 /* PushSchemeOpenable.swift in Sources */,
 				4727CD7B21C781D700AAFDB7 /* TitleViewController.m in Sources */,
+				0D8244DC21CBDDAD008CC823 /* BetListViewController.swift in Sources */,
 				47C0193021C25E06003DA90A /* CodeLayoutReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
