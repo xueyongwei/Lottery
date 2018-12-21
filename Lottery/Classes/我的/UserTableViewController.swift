@@ -22,9 +22,11 @@ class UserTableViewController: UITableViewController {
         MBProgressHUD.showSuccessImage("拷贝成功！")
         
     }
+    
     @IBAction func onUserInfoClick(_ sender: UIButton) {
         
     }
+    
     @IBAction func tapAccountMoney(_ sender: UITapGestureRecognizer) {
         MBProgressHUD.showWarningImage("余额")
     }
@@ -42,6 +44,17 @@ class UserTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 5{
+            let url = URL.init(string: "http://baidu.com")!
+            let webVC = CYWebViewController.init(url: url)!
+            webVC.loadingBarTintColor = UIColor.red
+            webVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(webVC, animated: true)
+        }
+    }
+    
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0

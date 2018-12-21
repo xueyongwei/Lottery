@@ -34,4 +34,6 @@ target 'Lottery' do
     pod 'mob_sharesdk/ShareSDKExtension'
     #倒计时
     pod 'ZJJTimeCountDown'
+    #网页浏览器
+    pod 'CYWebviewController'
 end

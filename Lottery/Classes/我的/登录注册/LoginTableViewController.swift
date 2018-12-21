@@ -9,7 +9,8 @@
 import UIKit
 
 class LoginTableViewController: UITableViewController {
-
+    @IBOutlet weak var loginBtn: UIButton!
+    
     @IBAction func onBackClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -17,6 +18,8 @@ class LoginTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.loginBtn.sg_eventTimeInterval = 1.0
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

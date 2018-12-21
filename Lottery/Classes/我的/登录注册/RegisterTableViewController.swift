@@ -10,16 +10,24 @@ import UIKit
 
 class RegisterTableViewController: UITableViewController {
 
+    @IBOutlet weak var codeBtn: UIButton!
+    @IBOutlet weak var registerBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.codeBtn.sg_eventTimeInterval = 1.0
+        self.registerBtn.sg_eventTimeInterval = 1.0
+        
+        
+        
     }
 
+    @IBAction func onCodeBtnClick(_ sender: UIButton) {
+        sender.sg_countdown(withSecond: 60) {
+            sender.setTitle("重新获取", for: .normal)
+        }
+    }
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {

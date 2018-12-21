@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.0)
   - CodableAlamofire (1.1.0):
     - Alamofire (~> 4.0)
+  - CYWebviewController (1.1.1)
   - JXCategoryView (1.1.4)
   - MBProgressHUD (0.9.1)
   - MJRefresh (3.1.15.7)
@@ -45,6 +46,7 @@ PODS:
 
 DEPENDENCIES:
   - CodableAlamofire
+  - CYWebviewController
   - JXCategoryView
   - MBProgressHUD (= 0.9.1)
   - MJRefresh
@@ -66,6 +68,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CodableAlamofire
+    - CYWebviewController
     - JXCategoryView
     - MBProgressHUD
     - MJRefresh
@@ -82,6 +85,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   CodableAlamofire: e2d2edcec7cf413f7862c30c8fa98eded27a83f9
+  CYWebviewController: 0787d55dddbfd8aa0588521d4480218ffdb4e5d3
   JXCategoryView: b255f32c0a8e54f5c7769a9ad6ec6940318d23c9
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -95,6 +99,6 @@ SPEC CHECKSUMS:
   YYKit: 7e27f6b55883bfe3ec2b98e7ad9c38fcbb92a1c5
   ZJJTimeCountDown: 7dad4e4e8071cc97c5329daf254a04213d04d4c2
 
-PODFILE CHECKSUM: c7bebdb62ec4f5cc500b94501a0ec9cdcf2da321
+PODFILE CHECKSUM: 2dd3b33df04c01d1d8b4c98d693c14e933cee703
 
 COCOAPODS: 1.6.0.beta.2

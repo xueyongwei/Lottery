@@ -10,9 +10,12 @@ import UIKit
 
 class FindPwdNewTableViewController: UITableViewController {
 
+    @IBOutlet weak var comitBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        comitBtn.sg_eventTimeInterval = 1.0
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +23,9 @@ class FindPwdNewTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func onSubmitClick(_ sender: UIButton) {
+        
+    }
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {

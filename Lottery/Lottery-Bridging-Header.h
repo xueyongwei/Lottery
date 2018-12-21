@@ -15,6 +15,8 @@
 #import <MJRefresh/MJRefresh.h>
 //列表无数据展示图片
 #import "UIScrollView+EmptyDataSet.h"
+//特殊的按钮
+#import "SGEasyButton.h"
 // 轮播
 #import "SDCycleScrollView.h"
 // 分类滑动切换
@@ -24,3 +26,5 @@
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 // Mob推送
 #import <MobPush/MobPush.h>
+// 浏览器
+#import "CYWebViewController.h"

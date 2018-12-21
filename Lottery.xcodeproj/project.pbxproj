@@ -52,6 +52,9 @@
 		4781AC8821C3889F00E3DD54 /* SSCai.json in Resources */ = {isa = PBXBuildFile; fileRef = 4781AC8721C3889F00E3DD54 /* SSCai.json */; };
 		47844B9121BFA94F00F4D420 /* BettingPayBoardViwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */; };
 		47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47844B9221BFBBB700F4D420 /* backViewTapable.swift */; };
+		478D26E421CCDF0600F4CC2B /* UIButton+SGCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 478D26DF21CCDF0600F4CC2B /* UIButton+SGCountdown.m */; };
+		478D26E521CCDF0600F4CC2B /* UIButton+SGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 478D26E121CCDF0600F4CC2B /* UIButton+SGEvent.m */; };
+		478D26E621CCDF0600F4CC2B /* UIButton+SGImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 478D26E321CCDF0600F4CC2B /* UIButton+SGImagePosition.m */; };
 		47BB6E6521C0BD1B00E71BAE /* FullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */; };
 		47BB6E6721C0BD3400E71BAE /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6621C0BD3400E71BAE /* BaseNavigationController.swift */; };
 		47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */; };
@@ -127,6 +130,13 @@
 		4781AC8721C3889F00E3DD54 /* SSCai.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SSCai.json; sourceTree = "<group>"; };
 		47844B9021BFA94F00F4D420 /* BettingPayBoardViwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingPayBoardViwable.swift; sourceTree = "<group>"; };
 		47844B9221BFBBB700F4D420 /* backViewTapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewTapable.swift; sourceTree = "<group>"; };
+		478D26DD21CCDF0600F4CC2B /* SGEasyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEasyButton.h; sourceTree = "<group>"; };
+		478D26DE21CCDF0600F4CC2B /* UIButton+SGCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGCountdown.h"; sourceTree = "<group>"; };
+		478D26DF21CCDF0600F4CC2B /* UIButton+SGCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGCountdown.m"; sourceTree = "<group>"; };
+		478D26E021CCDF0600F4CC2B /* UIButton+SGEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGEvent.h"; sourceTree = "<group>"; };
+		478D26E121CCDF0600F4CC2B /* UIButton+SGEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGEvent.m"; sourceTree = "<group>"; };
+		478D26E221CCDF0600F4CC2B /* UIButton+SGImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGImagePosition.h"; sourceTree = "<group>"; };
+		478D26E321CCDF0600F4CC2B /* UIButton+SGImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGImagePosition.m"; sourceTree = "<group>"; };
 		47BB6E6421C0BD1B00E71BAE /* FullScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenView.swift; sourceTree = "<group>"; };
 		47BB6E6621C0BD3400E71BAE /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		47BB6E6921C0E57000E71BAE /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
@@ -381,6 +391,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		478D26DC21CCDF0600F4CC2B /* SGEasyButton */ = {
+			isa = PBXGroup;
+			children = (
+				478D26DD21CCDF0600F4CC2B /* SGEasyButton.h */,
+				478D26DE21CCDF0600F4CC2B /* UIButton+SGCountdown.h */,
+				478D26DF21CCDF0600F4CC2B /* UIButton+SGCountdown.m */,
+				478D26E021CCDF0600F4CC2B /* UIButton+SGEvent.h */,
+				478D26E121CCDF0600F4CC2B /* UIButton+SGEvent.m */,
+				478D26E221CCDF0600F4CC2B /* UIButton+SGImagePosition.h */,
+				478D26E321CCDF0600F4CC2B /* UIButton+SGImagePosition.m */,
+			);
+			path = SGEasyButton;
+			sourceTree = "<group>";
+		};
 		47BB6E6121C0BCCF00E71BAE /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +448,7 @@
 		47BB6E6B21C0E5BC00E71BAE /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				478D26DC21CCDF0600F4CC2B /* SGEasyButton */,
 				4727CD7521C7819F00AAFDB7 /* JXCategoryViewController */,
 				4727CD7121C77F0F00AAFDB7 /* DZNEmptyDataSet */,
 			);
@@ -633,6 +658,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lottery/Pods-Lottery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CYWebviewController/CYWebviewController.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -649,6 +675,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYWebviewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -720,9 +747,11 @@
 				0DD30C9221C4D288008AECFA /* APICenter.swift in Sources */,
 				0DD30C7B21BEC29F008AECFA /* BettingTitleViwable.swift in Sources */,
 				475A924121C8F997007E77B4 /* ComeLotteryTableViewController.swift in Sources */,
+				478D26E621CCDF0600F4CC2B /* UIButton+SGImagePosition.m in Sources */,
 				4727CD7821C781BF00AAFDB7 /* BaseJXCategoryViewController.m in Sources */,
 				0DD30C7421BEABAF008AECFA /* BaseBettingViewController.swift in Sources */,
 				0DD30C6E21BEA82D008AECFA /* FFsscViewController.swift in Sources */,
+				478D26E421CCDF0600F4CC2B /* UIButton+SGCountdown.m in Sources */,
 				0DD30C9F21C56BC7008AECFA /* LotteryListViewController.swift in Sources */,
 				47844B9321BFBBB700F4D420 /* backViewTapable.swift in Sources */,
 				0D8244E521CBEDDE008CC823 /* RegisterTableViewController.swift in Sources */,
@@ -735,6 +764,7 @@
 				0DD30C8D21C1590F008AECFA /* SSCai.swift in Sources */,
 				0D8244DE21CBDE5E008CC823 /* UserTableViewController.swift in Sources */,
 				47BB6E6A21C0E57000E71BAE /* NotificationExtension.swift in Sources */,
+				478D26E521CCDF0600F4CC2B /* UIButton+SGEvent.m in Sources */,
 				0DD30C7D21C150FA008AECFA /* RootViewController.swift in Sources */,
 				47E8350221BE376B00B4B6F8 /* AppDelegate.swift in Sources */,
 				0D8244D621C93002008CC823 /* ComeLotteryTableViewViews.swift in Sources */,

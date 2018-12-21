@@ -10,8 +10,15 @@ import UIKit
 
 class FindPwdCodeTableViewController: UITableViewController {
 
+    @IBOutlet weak var codeBtn: UIButton!
+    
+    @IBOutlet weak var nextBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        codeBtn.sg_eventTimeInterval = 1.0
+        nextBtn.sg_eventTimeInterval = 1.0
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,6 +27,11 @@ class FindPwdCodeTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func onCodeClick(_ sender: UIButton) {
+        sender.sg_countdown(withSecond: 60) {
+            sender.setTitle("重新获取", for: .normal)
+        }
+    }
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {

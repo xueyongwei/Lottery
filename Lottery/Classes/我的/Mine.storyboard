@@ -93,8 +93,7 @@
                                                     </constraints>
                                                     <state key="normal" title="&gt;"/>
                                                     <connections>
-                                                        <action selector="onUserInfoClick:" destination="MSC-Dk-4Zl" eventType="touchUpInside" id="W31-nI-9Nw"/>
-                                                        <segue destination="oR2-yQ-9ap" kind="presentation" id="1m4-5M-uXg"/>
+                                                        <segue destination="oR2-yQ-9ap" kind="presentation" id="jNs-EQ-jGA"/>
                                                     </connections>
                                                 </button>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请您先登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpA-Nh-hup">
@@ -787,6 +786,9 @@
                                                     <state key="normal" title="获取验证码">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onCodeBtnClick:" destination="Qjg-pB-peu" eventType="touchUpInside" id="mot-UH-udb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -808,6 +810,10 @@
                             <outlet property="delegate" destination="Qjg-pB-peu" id="sr5-14-1d0"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="codeBtn" destination="qdH-Zt-2mv" id="CMn-3o-EbV"/>
+                        <outlet property="registerBtn" destination="dCs-ae-Rj8" id="v7U-sK-oHF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1N-xl-4Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -984,6 +990,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loginBtn" destination="nxt-AM-XMn" id="y1w-W9-5p3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxg-57-Dqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1055,6 +1064,9 @@
                                                     <state key="normal" title="获取验证码">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onCodeClick:" destination="lbm-Vs-5kL" eventType="touchUpInside" id="TTw-bt-vj7"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入尾号8888收到的验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLz-es-ZnF">
                                                     <rect key="frame" x="15" y="10" width="345" height="25"/>
@@ -1088,6 +1100,10 @@
                             <outlet property="delegate" destination="lbm-Vs-5kL" id="ISM-fH-m46"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="codeBtn" destination="iHX-RB-acg" id="bfF-nn-LbL"/>
+                        <outlet property="nextBtn" destination="auf-fF-QsK" id="Q0H-ok-DX0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AD-KM-GZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1114,6 +1130,9 @@
                                     <state key="normal" title="提交">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="onSubmitClick:" destination="Hgi-5C-786" eventType="touchUpInside" id="kzm-fw-Muw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1218,6 +1237,9 @@
                             <outlet property="delegate" destination="Hgi-5C-786" id="Vjs-a7-2Xv"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="comitBtn" destination="oen-6B-xOx" id="NDa-GL-Yd6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUl-aQ-kGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
